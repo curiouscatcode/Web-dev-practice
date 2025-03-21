@@ -1,0 +1,25 @@
+Yes! You’ve got it. Destructuring works only for objects, not for strings.
+
+🔹 req.body and req.query are objects, so you can destructure them:
+
+
+const { city, temperature } = req.body;  // ✅ Works (req.body is an object)
+const { search } = req.query;  // ✅ Works (req.query is an object)
+🔹 req.params.city is a string, so destructuring won't work:
+
+
+const { city } = req.params.city;  // ❌ Wrong (req.params.city is a string)
+Instead, just assign it normally:
+
+
+const city = req.params.city;  // ✅ Correct
+But What About req.params?
+👉 req.params itself is an object, so this works:
+
+
+const { city } = req.params;  // ✅ Works (req.params is an object)
+But req.params.city is a string, so you cannot destructure it further.
+
+Golden Rule to Remember
+✅ Destructure objects
+✅ Directly assign strings, numbers, and booleans

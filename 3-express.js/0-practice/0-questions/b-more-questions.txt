@@ -1,0 +1,59 @@
+Here are five more API challenges for you to practice:  
+
+1️⃣ **To-Do List API**  ---DONE
+   - Store tasks with `title`, `description`, and `status`.  
+   - `GET /tasks` → Returns all tasks.  
+   - `POST /tasks` → Adds a new task.  
+   - `PUT /tasks/:id` → Updates a task's status.  
+   - `DELETE /tasks/:id` → Deletes a task.  
+
+2️⃣ **Book Library API**  ---DONE 
+   - Store books with `title`, `author`, and `genre`.  
+   - `GET /books` → Returns all books.  
+   - `GET /books?genre=fiction` → Returns books of a specific genre.  
+   - `POST /books` → Adds a new book.  
+   - `DELETE /books/:id` → Deletes a book.  
+
+3️⃣ **Weather API (Mock Data)**  ---DONE
+   - Store weather info for different cities.  
+   - `GET /weather/:city` → Returns weather details for a city.  
+   - `POST /weather` → Adds a new city's weather info.  
+   - `PUT /weather/:city` → Updates weather info for a city.  
+
+4️⃣ **Music Playlist API**  ---DONE
+   - Store songs with `title`, `artist`, and `genre`.  
+   - `GET /songs` → Returns all songs.  
+   - `GET /songs?artist=Arijit` → Returns songs by a specific artist.  
+   - `POST /songs` → Adds a new song.  
+   - `DELETE /songs/:id` → Deletes a song.  
+
+5️⃣ **Student Grades API**  --- DONE
+   - Store students' names and grades.  
+   - `GET /students` → Returns all students with grades.  
+   - `GET /students?grade=A` → Returns students with grade "A".  
+   - `POST /students` → Adds a new student.  
+   - `PUT /students/:id` → Updates a student's grade.  
+That’s a good call! Practicing CRUD APIs will help reinforce what you’ve learned. Here are three questions for you:  
+
+### **6️⃣ User Management API**  ---DONE
+Create an Express API with the following routes:  
+- `POST /users` → Create a new user with `{ name, email, age }`  
+- `GET /users` → Fetch all users  
+- `GET /users/:id` → Fetch a user by ID  
+- `PUT /users/:id` → Update a user’s details  
+- `DELETE /users/:id` → Delete a user  
+
+**Bonus:** Use an in-memory array instead of a database for now.  
+
+---  
+
+### **7️⃣ Notes API**  ---DONE
+Design an API to manage user notes with these routes:  
+- `POST /notes` → Add a new note `{ title, content }`  
+- `GET /notes` → Retrieve all notes  
+- `GET /notes/:id` → Get a single note  
+- `DELETE /notes/:id` → Delete a note  
+
+**Bonus:** Allow filtering notes by title using query params.  
+
+---  

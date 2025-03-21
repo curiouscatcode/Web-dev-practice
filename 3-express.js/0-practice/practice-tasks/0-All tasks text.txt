@@ -1,0 +1,78 @@
+Since you haven’t learned **databases** and **authentication** yet, let’s focus on **strengthening your Node.js & Express skills** with smaller tasks that will help you gain confidence before tackling the invoice generator.  
+
+Here are **5 practical projects** (without databases) that will help you improve step by step:  
+
+---
+
+### **1️⃣ Basic API: Joke Generator**
+- Create an Express API that serves **random jokes**.
+- Use an array of jokes and return one at random when a user requests `/joke`.  
+- Add a `/jokes` endpoint that returns all jokes.  
+
+#### *Concepts Practiced:*  
+✅ Creating an Express server  
+✅ Handling routes  
+✅ Sending JSON responses  
+
+📌 *Extra Challenge:* Add a query parameter like `/joke?category=programming`.  
+
+---
+
+### **2️⃣ File Uploader API (Using Multer)**
+- Create an API that allows users to **upload images**.
+- Store images in a folder (`uploads/`) and return a URL to access them.  
+- Add an endpoint to **list all uploaded files**.  
+
+#### *Concepts Practiced:*  
+✅ Handling file uploads with `multer`  
+✅ Managing static files in Express  
+✅ Handling `POST` requests  
+
+📌 *Extra Challenge:* Limit file types to only images (JPEG, PNG).  
+
+---
+
+### **3️⃣ Simple Notes API**
+- Create a `notes.json` file and let users **add, delete, and update notes**.  
+- Use `fs` (file system module) to read and write notes instead of a database.  
+
+#### *Concepts Practiced:*  
+✅ CRUD operations  
+✅ Working with JSON files  
+✅ Handling HTTP requests (`GET`, `POST`, `PUT`, `DELETE`)  
+
+📌 *Extra Challenge:* Implement validation (e.g., prevent duplicate notes).  
+
+---
+
+### **4️⃣ HTML Page with Dynamic Data**
+- Create an Express server that serves an **HTML page** using `res.sendFile()`.  
+- Pass dynamic data (e.g., current time, user’s IP address) into the page.  
+
+#### *Concepts Practiced:*  
+✅ Serving static files  
+✅ Sending HTML responses  
+✅ Using `req` to get user data  
+
+📌 *Extra Challenge:* Use `EJS` or `Pug` templating engine instead of plain HTML.  
+
+---
+
+### **5️⃣ API Rate Limiter**
+- Build a middleware that **limits API requests** from a single IP address.  
+- If a user exceeds 5 requests per minute, return `429 Too Many Requests`.  
+
+#### *Concepts Practiced:*  
+✅ Writing middleware  
+✅ Working with request headers (`req.ip`)  
+✅ Setting time-based limits (`setTimeout` or `Date.now()`)  
+
+📌 *Extra Challenge:* Use `express-rate-limit` package to enhance it.  
+
+---
+
+### **What Next?**
+Once you complete these, you’ll be more comfortable with Express.js. Then, you can move on to:  
+- **Databases** (MongoDB, PostgreSQL)  
+- **Authentication** (JWT, bcrypt)  
+- **Your Invoice Generator Project!**  

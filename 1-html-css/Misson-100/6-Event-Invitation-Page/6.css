@@ -1,0 +1,139 @@
+body{
+    margin: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    background: linear-gradient(to right, rgb(232, 232, 84), lightyellow);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    margin: 20px;
+    font-family: Algerian;
+}
+
+h2{
+    margin: 0px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-top: 40px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.name-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.f-name,.l-name, .phone-no, .mail-id{
+    background-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px 300px 10px 10px;
+    display: flex;
+    flex: 50% 50%;
+    margin-right: 15%;
+}
+
+.phone-no{
+    margin-left: 24px;
+}
+
+.more-details{
+    margin-left: 25px;
+    margin-top: 40px;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+}
+
+.e-mail{
+    margin-left: 46%;
+}
+
+.prazan,
+.question-01-a{
+    margin-top: 30px;
+    margin-left: 2%;
+
+}
+
+.ok{
+    font-size: 200%;
+    margin-bottom: 0px;
+}
+
+.option{
+    display: grid;
+    grid-template-columns: 100px 400px;
+    margin-left: 2%;
+}
+
+.yes-option,
+.no-option{
+    display: flex;
+}
+
+.yes{
+    margin-top: 15px;
+    margin-right: 3px;
+}
+
+.no{
+    margin-top: 15px;
+    margin-right: 3px;
+}
+
+.yes-button,
+.no-button{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: rgb(175, 172, 172);
+    cursor: pointer;
+}
+
+.yes-text,
+.no-text{
+    margin-bottom: 10px;
+}
+
+.no-of-people{
+    margin-top: 20px;
+    margin-left: 2%;
+}
+
+.no-of-people-text{
+    background-color: lightgray;
+    border: none;
+    padding: 10px 700px 10px 10px;
+}
+
+.submit{
+    margin: 40px 0px 0px 50%;
+}
+
+.submit-button{
+    padding: 10px 10px 10px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    background-color: rgb(79, 79, 252);
+}

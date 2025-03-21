@@ -1,0 +1,95 @@
+@media (max-width: 768px) {
+    .options {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  
+    h3 {
+      font-size: 1.5em; /* Adjust section title size */
+    }
+  
+    body {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  }
+  
+
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-restaurant-menu-background-material-image_172144.jpg");
+    background-size: cover;
+}
+
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.upper-section{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 100%;
+}
+
+h2{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 15px;	
+    row-gap: 15px;
+    padding: 10px;	
+    height: 100vh;
+
+}
+
+h3{
+    text-align: center;
+    color: black;
+    font-family: algerian;
+    text-decoration: underline black;
+}
+
+.options{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2px;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+    font-size: 20px;
+}
+
+footer{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline red;
+    margin-top: 120px;
+}

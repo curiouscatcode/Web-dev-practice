@@ -1,0 +1,23 @@
+Question:- 
+one small question out of curiousity, i don't to go in depth now. Till now the data was an array so i
+ could use methods like push, splice, find, findIndex, filter etc. What happens in case i switch to database
+
+Answer:-
+Great question! When you switch from an in-memory array to a database, you won’t be able to use **JavaScript array methods** (`push`, `splice`, `find`, etc.) directly. Instead, you’ll use **database queries** to perform similar operations.
+
+### How It Works with a Database:
+- **MongoDB (NoSQL) with Mongoose (ODM)**  
+  - `.push()` → `Model.create({ ... })` or `$push` for arrays in a document  
+  - `.splice()` → `Model.findByIdAndUpdate(id, { $pull: { arrayField: value } })`  
+  - `.find()` → `Model.find({ field: value })`  
+  - `.findIndex()` → Not needed, since MongoDB queries directly return the required document  
+  - `.filter()` → `Model.find({ condition })`  
+
+- **PostgreSQL / MySQL (SQL databases)**
+  - `.push()` → `INSERT INTO table_name (...) VALUES (...);`
+  - `.splice()` → `DELETE FROM table_name WHERE condition;`
+  - `.find()` → `SELECT * FROM table_name WHERE condition;`
+  - `.findIndex()` → Not needed, since SQL queries return matching rows  
+  - `.filter()` → `SELECT * FROM table_name WHERE condition;`
+
+In short, you’ll **replace array methods with database queries** that achieve the same result. But the logic behind CRUD operations remains the same! 🚀

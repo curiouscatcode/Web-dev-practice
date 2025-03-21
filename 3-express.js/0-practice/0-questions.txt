@@ -1,0 +1,84 @@
+### **🟢 1. Basics & Modules**
+#### **🔹 Practice Questions**
+1️⃣ Write a simple script that logs **"Hello from Node.js"** using `console.log` and run it using the Node CLI. -- Done
+2️⃣ Create a module that exports a function to return the current date and time. Import and use this function in another file.  -- Done
+3️⃣ Use the `os` module to:
+   - Get the system uptime --DONE  
+   - Find the current user's home directory --DONE
+   - Check the total system memory  -- DONE
+4️⃣ Use the `path` module to:
+   - Find the extension of a given file path  
+   - Normalize a file path  
+   - Join two paths together  
+
+---
+
+### **🟢 2. File System (`fs` module)**
+#### **🔹 Practice Questions**
+5️⃣ Write a Node.js script that:
+   - Creates a **new file** (`test.txt`) and writes `"Hello, File System!"` to it.  
+   - Reads the file and prints its contents to the console.  --DONE
+   - Appends `"This is additional content."` to the file.  --DONE
+   - Deletes the file.  --DONE
+
+6️⃣ Modify the above code to use **async/await** instead of callbacks.   --DONE
+
+---
+
+### **🟢 3. HTTP Module (Building a Basic Server)**
+#### **🔹 Practice Questions**
+7️⃣ Create a simple HTTP server using the `http` module that: --DONE
+   - Listens on **port 5000**  
+   - Responds with `"Welcome to my server!"`  
+   - Prints `"Server is running on port 5000"` in the console  
+
+8️⃣ Modify the server to:   --DONE
+   - Respond with **different messages** based on the request URL (e.g., `/about` → `"About us page"`, `/contact` → `"Contact us"`)  
+   - Set appropriate `Content-Type` headers for plain text and HTML responses  
+
+---
+
+### **🟢 4. NPM & Packages**
+#### **🔹 Practice Questions**
+9️⃣ Initialize an NPM project (`npm init`) and install `lodash`. -- DONE 
+🔟 Use `lodash` to:              --DONE
+   - Shuffle an array of numbers  
+   - Get a random element from an array  
+   - Check if a value is an object  
+
+---
+
+### **🟢 5. Event Loop & Async Programming**
+#### **🔹 Practice Questions**
+1️⃣1️⃣ Create an **async function** that:  --DONE
+   - Waits for 2 seconds using `setTimeout`  
+   - Then logs `"2 seconds later..."`  
+   - Calls another function that logs `"Process finished"`  
+
+1️⃣2️⃣ Use **Promises** to:          --DONE
+   - Simulate fetching user data (`getUser()`) after 1 second  
+   - Simulate fetching orders (`getOrders()`) after another 2 seconds  
+   - Print the user and order data when both are ready  
+
+---
+
+### **🟢 6. Events & Streams**
+#### **🔹 Practice Questions**
+1️⃣3️⃣ Create an **EventEmitter** that:    --DONE
+   - Emits a `"greet"` event  
+   - Logs `"Hello, Node.js!"` when the event is emitted  
+
+1️⃣4️⃣ Create a **readable stream** that:        --DONE
+   - Reads data from `bigfile.txt` (or any file)  
+   - Streams it to the console in chunks  
+
+---
+
+### **🟢 7. Real-World Practice**
+#### **🔹 Project Challenge**
+1️⃣5️⃣ Build a simple REST API with Node.js that:
+   - Has two routes: `/users` and `/products`  
+   - Returns **JSON data** (hardcoded array of users/products)  
+   - Uses the `http` module  
+
+---

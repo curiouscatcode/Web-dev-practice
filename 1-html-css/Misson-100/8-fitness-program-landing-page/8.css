@@ -1,0 +1,132 @@
+body{
+    background: linear-gradient(30deg, rgb(252, 99, 99), yellow, lightblue);
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    background-color: lightyellow;
+}
+
+h2{
+    background-color: lightsalmon;
+}
+
+.main-grid{
+    display: flex;
+    height: 80vh;
+}
+
+.left-section{
+    flex: 6;
+}
+
+.right-section{
+    flex: 4;
+}
+
+table, th, td{
+    border: 1px solid;
+}
+
+table{
+    margin-top: 10vh;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    height: 35px;
+}
+
+td{
+    text-align: center;
+}
+
+tr:hover {background-color: lightgrey;}
+
+.workout-plan{
+    margin-bottom: 0px;
+}
+
+.sub-schedule{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.timing{
+    margin-top: 10px;
+}
+.schedule{
+    margin-top: 50px;
+    line-height: 25px;
+    font-family: Algerian, Arial;
+}
+
+.success-stories{
+    margin-top: 13vh;
+}
+
+.words{
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.photo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.image{
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0px) brightness(50%);
+    z-index: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.enroll-now{
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.enroll-now-button{
+    margin: 0px 0px 0px 0px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(253, 26, 26);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.enroll-now-button:hover{
+    background-color: rgb(249, 72, 72);
+    box-shadow: 2px 1px 5px black;
+}
+
+.contact-details{	
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+}

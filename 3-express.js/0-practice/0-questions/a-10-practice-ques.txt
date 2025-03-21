@@ -1,0 +1,62 @@
+npm init -y
+npm i express
+npm i nodemon
+That's the right mindset! 💪 The more you practice, the stronger you’ll get. Here are **10 practice ideas** similar to the Joke API but with different topics:  
+
+---
+
+### 🔥 **10 API Practice Challenges**  
+
+#### **1️⃣ Math Facts API** ✅ *(Similar to Joke API but for math facts)* ---DONE 
+- Store a list of math facts (e.g., "0 is neither prime nor composite").  
+- `/math` → Returns a random math fact.  
+- `/math?category=algebra` → Returns a random algebra fact.  
+
+#### **2️⃣ Fun Facts API**  ---DONE
+- Store facts about different topics (space, animals, history, etc.).  
+- `/fact` → Returns a random fact.  
+- `/fact?category=space` → Returns a space-related fact.  
+
+#### **3️⃣ Motivational Quotes API**  ---DONE
+- Store motivational quotes from famous people.  
+- `/quote` → Returns a random quote.  
+- `/quote?author=Einstein` → Returns a quote from Einstein.  
+
+#### **4️⃣ Riddles API**  ---DONE
+- Store riddles and their answers.  
+- `/riddle` → Returns a random riddle.  
+- `/riddle?category=logic` → Returns a logic-based riddle.  
+
+#### **5️⃣ Science Trivia API**  ---DONE
+- Store science-related trivia questions.  
+- `/trivia` → Returns a random question.  
+- `/trivia?difficulty=hard` → Returns a hard trivia question.  
+
+#### **6️⃣ Vocabulary API**  
+- Store words and their meanings.  
+- `/word` → Returns a random word.  
+- `/word?letter=A` → Returns a word that starts with "A".  
+
+#### **7️⃣ Emoji Meaning API**     ---DONE
+- Store emojis and their meanings.  
+- `/emoji` → Returns a random emoji and its meaning.  
+- `/emoji?name=fire` → Returns 🔥 and its meaning.  
+
+#### **8️⃣ Movie Suggestions API**  --DONE  
+- Store a list of movies by genre.  
+- `/movie` → Returns a random movie.  
+- `/movie?genre=action` → Returns a random action movie.  
+
+#### **9️⃣ Country Facts API**  ---DONE
+- Store facts about different countries.  
+- `/country` → Returns a random country fact.  
+- `/country?name=India` → Returns a fact about India.  
+
+#### **🔟 Programming Concepts API**    ---DONE
+- Store explanations of programming concepts.  
+- `/concept` → Returns a random concept.  
+- `/concept?topic=recursion` → Returns an explanation of recursion.  
+
+---
+
+🚀 **Now, pick one and start coding!** Which one do you want to try first? 😊

@@ -1,0 +1,197 @@
+.head{
+  display: flex;
+}
+.name{
+  flex: 1px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home{
+  flex: 1px;
+  font-size: 20px;
+  margin-top: 7px;
+}
+.pricing{
+  flex: 1px;
+  font-size: 20px;
+  margin-top: 7px;
+}
+.about-us{
+  flex: 1px;
+  font-size: 20px;
+  margin-top: 7px;
+}
+.contact{
+  flex: 1px;
+  font-size: 20px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+.log-in{
+  flex: 1px;
+  font-size: 20px;
+  padding-left: 40vw;
+  margin-top: 7px;
+}
+.sign-up{
+  flex: 10%;
+}
+.sign-up-button{
+  margin: 3.5vh 8px 0px 5vw;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(11, 11, 248);
+  color: white;
+  cursor: pointer;
+}
+.sign-up-button:hover{
+  background-color: blueviolet;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logIn-text{
+  cursor: pointer;
+}
+.logIn-text:hover{
+  text-decoration: underline black;
+  color: red;
+}
+.contact-text{
+  cursor: pointer;
+}
+.contact-text:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+.about-us-text{
+  cursor: pointer;
+}
+.about-us-text:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.pricing-text{
+  cursor: pointer;
+}
+.pricing-text:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+.home-text{
+  cursor: pointer;
+}
+.home-text:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+.middle-section{
+  display: flex;
+}
+.left-middle-section{
+  flex: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.right-middle-section{
+  flex: 45%;
+}
+.offer{
+  flex: 10%;
+  margin: 12vh 0px 10px 0px;
+  padding-left: 3vw;
+  font-size: 12px;
+}
+.offer-text{
+  margin: 0px;
+}
+.headline{
+  flex: 10%;
+}
+.sub-headline{
+  flex: 10%;
+}
+.more-buttons{
+  flex: 10%;
+}
+
+h3{
+  font-size: 80px;
+  margin: 0px;
+  padding-left: 2vw;
+  line-height: 12vh;
+  margin-bottom: 3vh;
+}
+
+.sub-headline{
+  margin-top: 10px;
+}
+.sub-headline-text{
+  margin: 0px 0px 0px 2vw;
+  color: gray;
+}
+
+.more-buttons{
+  display: flex;
+  margin-top: 6vh;
+  margin-left: 2vw;
+}
+
+.try{
+  margin: 0px 80px 0px 0px;
+}
+.try-button{
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(77, 77, 252);
+  border: none;
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: padding 0.5s;
+}
+.try-button:hover{
+  background-color: blueviolet;
+  padding: 12px 20px 12px 20px;
+  box-shadow: 1px 1px 5px black;
+}
+.see-button{
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(247, 185, 70);
+  border: none;
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: padding 0.5s;
+}
+.see-button:hover{
+  padding: 12px 20px 12px 20px;
+  background-color: rgb(252, 202, 109);
+  color: black;
+  font-weight: bold;
+  box-shadow: 1px 1px 5px black;
+}
+
+.photo{
+  margin: 18vh 0px 0px 8vw;
+}
+
+.product{
+  width: 25vw;
+  height: 50vh;
+}
+
+footer{
+  margin-top: 7vh;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}

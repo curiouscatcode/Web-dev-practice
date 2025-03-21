@@ -1,0 +1,189 @@
+body{
+  background-color: rgb(20,20,20);
+}
+
+header{
+  display: flex;
+}
+
+nav{
+  display: inline-block; 
+}
+
+.top-right-section{
+  width: 100%;
+  margin-left: 30vw;
+}
+
+.home, .about, .services, .shop, .blog{
+  font-size: 17px;
+  margin-right: 10px;
+  margin-top: 8vh;
+  margin-left: 1vw;
+  font-family: Arial;
+  color: white;
+}
+
+.home:hover, .about:hover, .services:hover, .shop:hover, .blog:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contact-button{
+  margin-left: 8vw;
+  padding: 8px 10px 8px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(85, 85, 252);
+  cursor: pointer;
+  transition: padding 0.5s;
+  font-weight: bold;
+}
+.contact-button:hover{
+  background-color: rgb(157, 67, 241);
+  padding: 10px 14px 10px 14px;
+  box-shadow: 2px 1px 5px black;
+}
+
+.dash{
+  color: orange;
+  font-weight: bold;
+}
+
+#logo{
+  width: 15vw;
+  height: 15vh;
+  margin-left: 1vw;
+  margin-top: 2vh;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+}
+
+.middle{
+  display: flex;
+}
+
+.middle-left-section{
+  flex: 1;
+  /*background-color: lightgreen;*/
+}
+
+.middle-right-section{
+  flex: 1;
+}
+
+.intro{
+  padding: 6vh 0px 0px 6vw;
+  font-size: 4.5em;
+  margin: 1vh 20px 4vh 0px;
+  color: rgb(248, 244, 244);
+}
+
+.intro:hover{
+  text-decoration: underline orange 5px;
+}
+
+#quote{
+  padding: 0px 0px 0px 8vw;
+  margin: 0px 2vw 0px 0px;
+  font-size: 16px;
+  color: white;
+}
+
+.middle-box{
+
+  margin: 5vh 2vw 0px 2vw ;
+  padding: 0px 0px 0px 3vw;
+}
+
+.phone-img,
+.gmail-img,
+.location-img{
+  width: 12px;
+  height: 12px;
+}
+
+li{
+  font-size: 30px;
+  color: white;
+}
+
+.details-text{
+  font-size: 15px;
+  margin-left: 20px;
+  color: red;
+}
+
+.projects-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-right: 24px;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  row-gap: 1vw;
+  column-gap: 2vh;        
+}
+
+.project-1, .project-3, .project-5{
+  border-style: dashed;
+}
+.project-2, .project-4, .project-6{
+  border-style: dashed;
+}
+
+.project-img{
+  width: 20vw;
+  height: 30vh;
+  cursor: pointer;
+}
+.middle-right-section{
+  margin-top: 6vh;
+}
+
+.guy-main{
+  display: flex;
+  
+  justify-content: center;
+  height: 100%;
+}
+
+.guy-img{
+  width: 30vw;
+  height: 50vh;
+  margin-top: 20vh;
+}
+
+.review-container{
+  margin-top: 5vh;
+  height: 50vh;
+  display: fixed;
+}
+
+.review-main{
+  background-color: rgb(20,20,20);
+  color: white;
+  height: 80%;
+  margin-top: 2px;
+  margin: 50px 50px;
+  display: flex;
+}
+
+.review-box{
+  background-color: rgb(108, 91, 91);
+  margin-right: 3vw;
+  margin-left: 2vw;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  flex: 1;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.review-box:hover{
+  transform: rotate(15deg);
+  box-shadow: 2px 2px 5px white;
+}
+
+.review-text-div{
+  margin: 20px 2px 20px 10px;
+  font-size: 20px;
+}
