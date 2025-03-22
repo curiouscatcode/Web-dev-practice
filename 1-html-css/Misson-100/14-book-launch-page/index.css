@@ -168,14 +168,14 @@ header{
   
 }
 
-button:hover {
+.create-acc-btn:hover {
   color: #ffffff;
   transform: scale(1.1);
   outline: 2px solid #70bdca;
   box-shadow: 4px 5px 17px -4px #268391;
 }
 
-button::before {
+.create-acc-btn::before {
   content: "";
   position: absolute;
   left: -50px;
@@ -199,13 +199,14 @@ button:hover::before {
  }
  .left-half{
   flex: 0.8;
-  height: 30rem;
+  height: 29rem;
   position: relative;
+  padding-left: 10px;
+  margin-right: 10px;
  }
 
  .right-half{
   flex: 1.2;
-  background-color: yellow;
  }
 
  .book-photo-div{
@@ -249,3 +250,83 @@ button:hover::before {
   transform: scale(1.1);
   border: solid 4px rgb(1, 98, 244);
  }
+
+ .title-div{
+  font-size: 18px;
+  letter-spacing: 2px;
+ }
+
+ .title-div  span{
+  color: red;
+  text-transform: uppercase;
+  font-size: 85px;
+  padding-left: 22vw;
+}
+
+.details-div{
+  display: flex;
+}
+
+.author-div{
+  flex: 1;
+}
+.upper-div{
+  border-top-right-radius: 20px;
+  padding-left: 10px;
+  margin-right: 7vw;
+  border-top-left-radius: 5px;
+  font-style: italic;
+  background-color: rgba(249, 186, 168, 0.425);
+  backdrop-filter: blur(5%);
+}
+.lower-div{
+  padding-left: 10px;
+  margin-right: 7vw;
+  font-size: 20px;
+  font-weight: 800;
+  background-color: rgba(168, 249, 210, 0.425);
+  backdrop-filter: blur(5%);
+}
+.type-div{
+  flex: 1;
+}
+.layout-div{
+  flex: 1;
+}
+
+.final-div{
+  display: flex;
+  margin-top: 20px; 
+}
+.price-div{
+  flex: 0.4;
+}
+.price-div span{
+  font-weight: 1000;
+  font-size: 40px;
+}
+.buy-div{
+  flex: 1;
+}
+
+.buy-btn{
+  background: linear-gradient(to bottom left, rgb(237, 47, 202), #ffeeaa);
+  padding: 12px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}
+
+.left-half, .right-half, .buy-btn, .create-acc-btn, body {
+  user-select: none;
+}
+
+.buy-btn:hover{
+  background: linear-gradient(to top right, #a3955f, rgb(55, 20, 49));
+  transform: scale(1.2);
+  box-shadow: #a3955f;
+}
