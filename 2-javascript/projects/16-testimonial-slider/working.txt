@@ -1,0 +1,8 @@
+Sure! Here's a simple breakdown of the `updateTestimonial()` function:  
+
+1. It **extracts** the `name`, `photoUrl`, and `text` from the `testimonials` array using the current `idx` (index).  
+2. It **updates** the image, text, and username in the HTML using `imgEl.src`, `textEl.innerHTML`, and `usernameEl.innerHTML`.  
+3. It **increments** `idx` to move to the next testimonial, resetting to `0` if it reaches the end of the array.  
+4. It **calls itself recursively** every 5 seconds using `setTimeout()`, creating an automatic slider effect.  
+
+This way, the testimonials keep changing in a loop! 🚀

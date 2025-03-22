@@ -1,0 +1,31 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 97vh;
+}
+.container{
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .background-toggle{
+  width: 7vw;
+  height: 7vh;
+  background-color: #dbdcdb;
+  border-radius: 18px;
+  position: relative;
+}
+
+.background-toggle .circle{
+  height: 5.5vh;
+  width: 2.5vw;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 50px;
+  display: flex;
+  margin: 0.8vh;
+  cursor: pointer;
+}

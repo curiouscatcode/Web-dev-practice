@@ -1,0 +1,94 @@
+body{
+  background-image: linear-gradient(to bottom left, rgb(239, 113, 239), rgb(92, 92, 198));
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.left-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container .photo{
+  height: 50vh;
+  width: 25vw;
+  border-radius: 10px;
+  border: solid 2px blue;
+}
+.right-container .main-right-container{
+  background-color: lightyellow;
+  margin: 8vh 30px 10px 30px;
+  min-height: 75vh;
+  border-radius: 20px;
+  position: relative;
+}
+.sub-tabs{
+  position: absolute;
+  display: flex;
+  background-color: blue;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 20px;
+  background-color: lightyellow;
+}
+.step1{
+  flex: 1;
+  padding-left: 5vh;
+  background-color: red;
+  border-top-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: lightyellow;
+  padding-bottom: 10px;
+}
+.step2{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: lightyellow;
+}
+.step3{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+  font-size: 30px;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+  background-color: lightyellow;
+}
+
+/*
+.step1:hover, .step2:hover, .step3:hover{
+  background-color: #e44884;
+  color: white;
+}
+*/
+.content-container{
+  position: absolute;
+  margin-top: 15vh;
+  margin-left: 2vw;
+  width: 90%;
+  height: 60%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.content-container .text-div{
+  position: relative;
+  margin: 20px 20px 40px 20px;
+  height: 35vh;
+}
+.text-div p{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 20px;
+}

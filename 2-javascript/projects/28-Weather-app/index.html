@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form class="weatherForm">
+    <input class="search-box search-box-js" type="text" placeholder="Enter City Name">
+    <button class="get-btn btn-js">Get Weather</button>
+  </form>
+
+  <div class="container">
+    <div class="top-container">
+      <p class="city-name city-js"></p>
+    </div>
+    <div class="middle-container">
+      <p class="temperature temp-js"></p>
+      <p class="description"></p>
+      <p class="condition"></p>
+    </div>
+    <div class="emoji">
+      <p class="weatherEmoji"></p>
+    </div>
+    <p class="errorDisplay">Please enter a city</p>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

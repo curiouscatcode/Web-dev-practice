@@ -1,0 +1,65 @@
+body{
+  min-height: 95vh;
+  background-image: linear-gradient(to top right, rgb(231, 58, 58), rgb(35, 34, 34));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: white;
+}
+.container{
+  min-height: 60vh;
+  place-items: center;
+  background-color: rgba(32, 31, 31, 0.196);
+  backdrop-filter: blur(10px);
+  width: 60vw;
+}
+.container1{
+  display: flex;
+  height: 8vh;
+  margin-top: 10px;
+}
+.css-input{
+  margin-bottom: 30vh;
+  padding: 10px 12px;
+  width: 30vw;
+}
+.dropdown-container select{
+  margin-left: 1vw;
+  margin-top: 4vh;
+}
+option{
+  background-color: rgb(181, 181, 181);
+}
+.container2{
+  margin: 7vh;
+}
+.instruction{
+  display: inline-block;
+  margin-right: 20px;
+}
+.cel-btn,
+.kel-btn,
+.fah-btn{
+  background-color: rgb(183, 227, 24);
+  border: none;
+  padding: 8px 6px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.css-output{
+  padding: 20px;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}

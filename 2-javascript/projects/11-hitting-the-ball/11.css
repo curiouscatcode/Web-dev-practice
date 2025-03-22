@@ -1,0 +1,26 @@
+body{
+  min-height: 97vh;
+  background-image: linear-gradient(to top right, #8182d3, #f56970);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-play-container{
+  height: 85vh;
+  width: 643px;
+  background-color: rgba(1, 4, 14, 0.205);
+  backdrop-filter: blur(20px);
+  position: relative;
+}
+.movable-area{
+  background-color: red;
+  width: 50vw;
+  margin-top: 79vh;
+  height: 26px;
+}
+.paddle{
+  background-color: #444fdd;
+  width: 100px;
+  height: 26px;
+}

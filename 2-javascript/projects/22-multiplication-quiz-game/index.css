@@ -1,0 +1,63 @@
+body{
+  min-height: 97vh;
+  background-color: #eaff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins, Arial;
+}
+.container{
+  background-color: #ffffff;
+  height: 40vh;
+  width: 35vw;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.721);
+  border-radius: 10px;
+  position: relative;
+}
+.container .score-div{
+  color: rgb(1, 121, 1);
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.container .question-div{
+  position: absolute;
+  width: 100%;
+  top: 7vh;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.container .answer-input{
+  position: absolute;
+  top: 15vh;
+  font-size: 22px;
+  width: 80%;
+  padding: 10px;
+  left: 2.5vw;
+  border: 5px solid green;
+}
+.container .submit-btn{
+  position: absolute;
+  top: 28vh;
+  width: 95%;
+  margin-left: 10px;
+  font-size: 22px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: green;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit-btn:hover{
+  background-color: rgb(2, 186, 2);
+  color: black;
+  font-size: 25px;
+}

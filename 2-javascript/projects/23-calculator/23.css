@@ -1,0 +1,74 @@
+body{
+  margin-left: 5vw;
+  min-height: 95vh;
+  background-image: linear-gradient(to bottom right, rgb(50, 187, 71) , yellow);
+}
+.container{
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.answer-screen{
+  background-color: rgba(74, 32, 244, 0.304);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  color: blue;
+  font-size: 45px;
+  height: 15vh;
+  margin-bottom: 20px;
+  width: 72vw;
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+}
+.no1, .no2, .no3, .no4, .no5, .no6, .no7, .no8, .no9{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(131, 131, 131);
+  height: 13vh;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.9);
+} 
+.plus-sign, .minus-sign, .multiply-sign, .divide-sign, .equal-sign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+  background-color: orange;
+  height: 13vh;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.9);
+}
+.clear-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  background-color: orange;
+  height: 13vh;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+.no1:hover, .no2:hover, .no3:hover, .no4:hover, .no5:hover, .no6:hover, .no7:hover, .no8:hover, .no9:hover{
+  background-color: rgb(179, 165, 165);
+  color: black;
+}
+.plus-sign:hover, .minus-sign:hover, .multiply-sign:hover, .divide-sign:hover, .equal-sign:hover, .clear-btn:hover{
+  background-color: rgb(251, 187, 69);
+  color: black;
+}

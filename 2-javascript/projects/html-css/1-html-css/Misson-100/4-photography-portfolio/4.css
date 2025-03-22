@@ -1,0 +1,99 @@
+body{
+    margin: 20px auto; /* Centered and balanced margin */
+    display: flex;
+    height: 93vh;
+    background-color: black;
+    margin: 20px 30px 20px 30px;
+}
+
+.left-side{
+    flex: 35; /* 35% of the space */
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Arrange children vertically*/
+}
+
+.right-side{
+    flex: 65; /* Remaining 65% of the space */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading {
+    flex: 2; /* Take 2 parts of the available space */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(252, 142, 17);
+}
+
+.subheading {
+    flex: 0; /* Take 1 part of the available space */
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.paragraph {
+    flex: 2; /* Take 4 parts of the available space */
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.read-more {
+    flex: 2; /* Take 1 part of the available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}		
+
+.read{
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: black;
+    color: white;
+    font-style: italic;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.read:hover{
+    background-color: rgb(73, 72, 72);
+    color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 6px;
+    column-gap: 10px;
+    row-gap: 5px;
+    background-color: lightblue;
+}
+
+.photo-1, .photo-2, .photo-3, .photo-4, .photo-5,
+.photo-6, .photo-7, .photo-8, .photo-9{
+    width: 160px;
+    height: 160px;
+}

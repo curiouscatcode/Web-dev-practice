@@ -1,0 +1,146 @@
+body{
+  font-family: Tinos Static, Arial;
+  color: white;
+  background-image: linear-gradient(90deg, rgb(152, 219, 184), rgb(255, 206, 214));
+}
+.head-container{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.logo-container{
+  display: flex;
+  margin-right: 65vw;
+}
+#logo{
+
+  width: 50px;
+  height: 50px;
+}
+.navigation-tabs{
+  display: flex;
+  gap: 12px;
+}
+.nav-tab-a{
+  margin-right: 12px;
+  cursor: pointer;
+  color: darkred;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+    color: red;
+  }
+}
+#contact-me-button{
+  background-color: rgb(84, 84, 252);
+  border: solid rgb(84, 84, 252);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  margin-left: 50px;
+  transition: 0.3s;
+  &:hover{
+    background-color: white;
+    color: rgb(84, 84, 252);
+    border-color: rgb(84, 84, 252);
+    border: solid;
+    cursor: pointer;
+  }
+}
+
+.main-container{
+  display: flex;
+  margin: 20px 40px;
+  height: 95vh;
+}
+.left-half-container{
+  flex: 1.5;
+}
+.right-half-container{
+  flex: 1;
+}
+.photo-container{
+  display: grid;
+  place-items: center;
+  height: 80%;
+  margin: 30px 30px;
+}
+#photo{
+  height: 50vh;
+    transform: rotateZ(5deg);
+    box-shadow: 2px 2px 10px black;
+    transition: 0.3s;
+    &:hover{
+      height: 60vh;
+      transform: rotateZ(10deg);
+    }
+}
+
+.left-half-container{
+  margin: 10px 10px;
+}
+.heading-div{
+  margin: 10px 10px;
+  box-sizing: border-box;
+  font-weight: bolder;
+  padding: 10px 10px ;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: brown;
+  font-family: Merienda;
+  transition: 0.3s;
+  margin-bottom: 8vh;
+  &:hover{
+    font-size: 45px;
+    transform: rotateZ(5deg);
+  }
+}
+.tour-container{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-bottom: 20px;
+}
+.tour-heading{
+  display: flex;
+  align-items: left;
+  margin-left: 30px;
+  font-weight: bold;
+  font-family: Merienda, Arial;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+
+ul{
+  margin: 1px;
+}
+
+li{
+  margin: 2px;
+}
+#book-img{
+  height: 80px;
+  width: 80px;
+}
+.book-now-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+}
+.album-container{
+  margin: 20px 50px;
+  height: 25vh;
+  padding: 20px 10px;
+  background-color: rgb(137, 137, 137);
+  width: 500px; 
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-1, .img-2, .img-3{
+  height: 150px;
+  width: 150px;
+}

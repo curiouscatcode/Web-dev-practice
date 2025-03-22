@@ -1,0 +1,17 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.container{
+  background-color: #c1c1f3;
+  padding-left: 10px;
+  padding-right: 20vw;
+}
+
+h3{
+  margin-bottom: 20px;
+
+}

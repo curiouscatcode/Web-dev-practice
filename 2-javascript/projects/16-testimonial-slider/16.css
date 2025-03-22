@@ -1,0 +1,32 @@
+body{
+  min-height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Acme, Arial;
+}
+.container{
+  background-color: blue;
+  min-width: 60vw;
+  min-height: 30vh;
+  padding-left: 60px;
+  padding-bottom: 40px;
+  font-size: 25px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.container img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  margin-left: 45%;
+}
+.container .text{
+  position: absolute;
+  margin-bottom: 12vh;
+}
+.username{
+  margin-top:13vh;
+}

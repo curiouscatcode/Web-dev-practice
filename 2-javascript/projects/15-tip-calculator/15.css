@@ -1,0 +1,77 @@
+body{
+  min-height: 97vh;
+  background-image: linear-gradient(to top right, rgb(251, 135, 154), rgb(176, 114, 227)); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Satisfy, Arial;
+  font-weight: bold;
+}
+.container{
+  background-color: rgba(254, 195, 247, 0.304);
+  backdrop-filter: blur(20px);
+  height: 70vh;
+  width: 90vw;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0,0.2);
+}
+.container h1{
+  display: flex;
+  justify-content: center;
+}
+.note{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.bill-content{
+  margin-bottom: 10px;
+}
+.bill-amt-label{
+  display: block;
+  font-family: Arial;
+  margin-bottom: 5px;
+}
+.bill-amt-input,
+.tip-per-input{
+  width: 80vw;
+  height: 4vh;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+}
+.tip-content{
+  margin-bottom: 14px;
+}
+.tip-per-label{
+  display: block;
+  font-family: Arial;
+  margin-bottom: 5px;
+}
+
+.calculate-btn-css{
+  width: 90vw;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(5, 161, 5);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0,0.2);
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.calculate-btn-css:hover{
+  background-color: rgb(6, 203, 6);
+}
+.output-div{
+  font-size: 18px;
+}
+.final-answer{
+  font-weight: bold;
+  font-size: 22px;
+}

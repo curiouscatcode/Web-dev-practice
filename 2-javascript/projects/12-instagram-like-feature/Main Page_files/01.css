@@ -1,0 +1,201 @@
+body{
+  min-height: 240vh;
+  font-family: poppins, Arial;
+  background: #191919;
+  color: white;
+}
+
+nav .nav-container{
+  padding: 2px;
+  position: relative;
+  height: 10vh;
+}
+.nav-container .logo-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 10vh;
+}
+.logo{
+  height: 8vh;
+  width: 10vw;
+}
+.nav-container .signing{
+  position: absolute;
+  right: 18vw;
+  top: 5vh;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.signing::before{
+  content: '';
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 100px;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 800ms;
+}
+/*
+.signing:hover{
+  background-color: #8a7ce168;
+  border: solid 2px #8a7ce168;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+*/
+.signing:hover::before{
+  width: 0;
+  background: linear-gradient(to left, yellow, blue);
+}
+
+.nav-container .generate-invoice-btn{
+  position: absolute;
+  right: 8vw;
+  top: 4.5vh;
+  padding: 6px 10px;
+  background-color: rgba(24, 24, 245, 0.811);
+  color: white;
+  font-weight: bold;
+  font-family: poppins, arial;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 2s;
+}
+.generate-invoice-btn:hover{
+  box-shadow: 2px 0px 6px white;
+  background-image: linear-gradient(to left, yellow, blue);
+}
+
+.tagline-div{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0px;
+}
+.tagline{
+  margin-bottom: 0px;
+  color: crimson;
+}
+.tagline::after{
+  background: linear-gradient(to right, red,blue, yellow);
+  position: absolute;
+  content: '';
+  bottom: 0;
+  height: 3px;
+  width: 40vw;
+  left: 29%;
+  border-radius: 50px;
+  transition: 1s;
+}
+.tagline:hover::after{
+  width: 33vw;
+}
+.middle-container{
+  height: 218vh;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+  margin-top: 15px;
+  position: relative;
+}
+.mid-left-container{
+  flex: 60%;
+}
+.mid-right-container{
+  flex: 40%;
+}
+#form-div{
+  width: 55%;
+  height: 90%;
+  margin-left: 2%;
+  margin-top: 1%;
+  padding: 20px;
+  position: absolute;
+}
+.label-1,
+.label-2,
+.label-3,
+.label-4,
+.label-5{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+#label-2,
+#label-3,
+#label-4,
+#label-5{
+  margin-top: 10px;
+}
+.label-1-a,
+.label-1-b,
+.label-1-c,
+.label-2-a,
+.label-2-b,
+.label-2-c,
+.label-3-a,
+.label-3-b,
+.label-3-c,
+.label-4-a,
+.label-4-b,
+.label-4-c,
+.label-4-d,
+.label-5-a{
+  margin-left: 2vw;
+  margin-top: 2vh;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.input-1-a,
+.input-1-b,
+.input-2-a,
+.input-2-b,
+.input-2-c,
+.input-3-a,
+.input-3-b,
+.input-3-c,
+.input-4-a,
+.input-4-b,
+.input-4-c,
+.input-4-d,
+.input-5-a{
+  margin-left: 2vw;
+  margin-top: 0.5vh;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-radius: 20px;
+  border: none;
+  width: 40vw;
+}
+.input-1-c{
+  margin-left: 2vw;
+  margin-top: 0.5vh;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-radius: 20px;
+  border: none; 
+}
+.final-generate-btn{
+  display: block;
+  margin-top: 5vh;
+  padding: 10px 8px;
+  font-weight: 30px;
+  border-radius: 13px;
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.final-generate-btn:hover{
+  box-shadow: 2px 1px 5px rgb(181, 181, 181) ;
+}

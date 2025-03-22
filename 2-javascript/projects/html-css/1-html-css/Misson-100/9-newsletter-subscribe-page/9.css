@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    margin: 60px 0px 30px 200px;
+    
+}
+
+.main-box{
+    border-style: solid;
+    border-color: black;
+    width: 70vw;
+    height: 83vh;
+    background: url(./background-1.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.message-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh 0px 5vh 0px;
+    font-family: "Ubuntu", Arial;
+    color: white;
+}
+.h1{
+    color: black;
+}
+
+.second-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+input{
+    margin: 0px 15vw 3vh 15vw;
+    padding: 10px 0px 5px 15px;
+    border-radius: 10px;
+    border: none;
+    font-family: Arial;
+    background-color: lightgray;
+}
+
+.third-box{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    padding: 10px 10px 10px 10px;
+    background-color: rgb(251, 61, 61);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(255, 94, 94);
+}
+
+span{
+    font-size: 20px;
+}

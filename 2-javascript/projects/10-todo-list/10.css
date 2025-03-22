@@ -1,0 +1,91 @@
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 95vh;
+}
+
+.main-container{
+  min-height: 80vw;
+  min-width: 70vw;
+}
+.container-1{
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+.container-1-a{
+  margin-right: 20px;
+}
+.css-input-box{
+  font-size: 22px;
+  padding: 8px;
+}
+.container-1-b{
+  place-items: center;
+}
+.css-due-date{
+  font-size: 15px;
+  height: 40px;
+  margin-right: 10px;
+}
+.css-add-btn{
+  padding: 8px 22px;
+  border: solid;
+  background-color: rgb(41, 41, 254);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.css-add-btn:hover{
+  color: rgb(41, 41, 254);
+  background-color: white;
+  font-weight: bold;
+}
+.container-2{
+  margin-right: 15vw;
+  margin-left: 15vw;
+  margin-top: 10px;
+  min-height: 50vh;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.container-2-a{
+  margin-left: 20px;
+  margin-right: 10px;
+  min-height: 5vh;
+  display: flex;
+  width: 45vw;
+}
+.css-task-1{
+  flex: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 13px;
+}
+.css-delete-btn{
+  margin: 7px;
+  background-color: rgb(254, 34, 34);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.css-delete-btn:hover{
+  background-color: rgb(250, 87, 87);
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+.due-date{
+  display: grid;
+  place-items: center;
+  margin-right: 70px;
+  font-size: 20px;
+}

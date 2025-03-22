@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Pong Game</title>
+  <style>
+    /* Add a simple game area */
+    #gameArea {
+      position: relative;
+      width: 400px;
+      height: 600px;
+      border: 2px solid black;
+      margin: auto;
+      background-color: lightgray;
+    }
+
+    /* Paddle style */
+    #paddle {
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background-color: blue;
+      top: 200px; /* Initial paddle position */
+      left: 20px; /* Fixed X position */
+    }
+  </style>
+</head>
+<body>
+  <h1>Ping Pong Game</h1>
+  <div id="gameArea">
+    <div id="paddle"></div>
+  </div>
+
+  <script src="./05.js">
+    // JavaScript will go here
+  </script>
+</body>
+</html>

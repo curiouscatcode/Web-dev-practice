@@ -1,0 +1,66 @@
+body{
+  background-image: linear-gradient(to right, rgb(236, 16, 49), rgb(255, 0, 212));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.container{
+  min-height: 40vh;
+  width: 50vw;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading{
+  color: gold;
+  font-style: italic;
+}
+
+.main{
+  width: 40vw;
+  height: 20vh;
+  background-color: orchid;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .css-time {
+  background-color: rgb(254, 247, 233);
+  backdrop-filter: blur(40px);
+  min-height: 15vh;
+  width: 20vw;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.css-input{
+  margin: 20px;
+  padding: 10px;
+}
+
+.css-btn, 
+.css-reset{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-style: solid;
+  padding: 10px 14px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  margin-right: 20px;
+}

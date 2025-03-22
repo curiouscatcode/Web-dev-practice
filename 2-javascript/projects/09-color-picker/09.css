@@ -1,0 +1,38 @@
+body{
+  min-height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container{
+  background-color: rgba(32, 31, 31, 0.196);
+  backdrop-filter: blur(20px);
+  width: 40vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.display{
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  border: 2px solid #000;
+}
+.generator-btn{
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(160, 250, 24);
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.generator-btn:hover{
+  color: rgb(199, 250, 123);
+  background-color: black;
+  padding: 13px 13px;
+}

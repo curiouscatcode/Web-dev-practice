@@ -1,0 +1,88 @@
+body{
+  min-height: 97vh;
+  background: linear-gradient(to right bottom, rgb(255, 255, 0),hsl(70, 85%, 69%), rgb(66, 219, 66));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins, Arial;
+  flex-direction: column;
+}
+.container{
+  background: linear-gradient(to bottom, skyblue, rgb(254, 194, 82));
+  width: 50vw;
+  height: 65vh;
+}
+.container .top-container{
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 0px;
+}
+.city-name{
+  margin-top: 5vh;
+  margin-bottom: 0px;
+}
+.container .middle-container{
+  text-align: center;
+}
+.temperature{
+  margin-top: 2vh;
+  margin-bottom: 0px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+.description,
+.condition{
+  font-size: 20px;
+  margin-top: 1vh;
+  margin-bottom: 0px;
+  font-family: Architects Daughter, Arial;
+  font-weight: bold;
+  color: yellow;
+}
+.emoji{
+  margin-top: 0px;
+  text-align: center;
+  font-size: 80px;
+}
+.weatherEmoji{
+  margin: 0px;
+}
+.weatherForm{
+  width: 50vw;
+  margin-bottom: 30px;
+}
+.search-box{
+  font-size: 20px;
+  padding: 8px 40px 8px 20px;
+  border-radius: 20px;
+  border: none;
+  width: 25vw;
+  margin-top: 1px;
+}
+.get-btn{
+  font-size: 18px; 
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 8.5vw;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, rgb(247, 111, 247) , red);
+  color: white;
+  font-weight: bold;
+  box-shadow: -2px -1px 5px rgba(0, 0, 0, 0.9);
+  transition: all 0.8s ease;
+}
+.get-btn:hover{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+}
+.errorDisplay{
+  text-align: center;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsla(0, 0%, 0%, 0.75)  ;
+}

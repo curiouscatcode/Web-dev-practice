@@ -1,6 +1,6 @@
 body{
   margin: 0.5rem;
-  background: linear-gradient(to bottom, #FFF3E0, #FFE0B2);
+  background: linear-gradient(to left bottom, #FFF3E0, #b4a8b3);
   min-height: 97vh;
 }
 
@@ -67,11 +67,12 @@ header{
 
 .collection-box,
 .top-selling{
-  background: linear-gradient(155deg, rgb(241, 177, 231), rgb(214, 250, 206));
+  background: linear-gradient(155deg, rgb(241, 177, 231), rgb(246, 219, 88));
   backdrop-filter: blur(5px);
   flex: 0.1;
   border-radius: 50px;
   margin-right: 1px;
+  font-weight: bold;
 }
 
 .top-selling{
@@ -190,3 +191,61 @@ button::before {
 button:hover::before {
   width: 250%;
 }
+ .center{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+ }
+ .left-half{
+  flex: 0.8;
+  height: 30rem;
+  position: relative;
+ }
+
+ .right-half{
+  flex: 1.2;
+  background-color: yellow;
+ }
+
+ .book-photo-div{
+  height: 10px;
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  min-width: 0%;
+ }
+
+ .book-image{
+  top: 7%;
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  transform: rotate(10deg);
+  border-radius: 20px;
+  border: solid 2px red;
+  transition: all 0.3s ease;
+ }
+
+ .bg-image{
+  z-index: 0;
+  border-radius: 20px;
+  height: 65vh;
+  width: 31vw;
+  border: solid 2px black;
+  transform: rotate(-10deg);
+  opacity: 0.8;
+ }
+
+ .book-image:hover{
+  transform: rotate(-10deg);
+  transform: scale(1.1);
+  border: solid 4px rgb(1, 98, 244);
+ }
