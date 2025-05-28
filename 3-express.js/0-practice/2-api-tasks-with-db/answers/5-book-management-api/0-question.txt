@@ -1,0 +1,18 @@
+Nice! More practice will make you even better. Here’s your next task:  
+
+### **Build a "Book Management API" with PostgreSQL** 📚  
+
+#### **Tables:**  
+- **books** (id, title, author, genre, published_year, created_at, updated_at)  
+
+#### **Required CRUD Operations:**  
+1. **Create a book** 📖  
+   - Accepts `title`, `author`, `genre`, and `published_year`.  
+2. **Get all books** 🔍  
+   - Supports filtering by `genre` and sorting by `published_year` (asc/desc).  
+3. **Get a book by ID** 🆔  
+4. **Update a book** ✏  
+   - Allow updating any field except `id`.  
+5. **Delete a book** ❌  
+
+This is similar to your previous APIs but with extra filtering and sorting! Try to complete it on your own, and let me know if you get stuck. 🚀

@@ -1,0 +1,21 @@
+Perfect. Let's go step by step. Since we’re not rushing and it’s a bit tough, we’ll build **just one piece at a time**.
+
+---
+
+## 🧠 Step 1: What should `/upload-resume` actually do?
+
+When someone uploads a resume (PDF), what do you *want* to happen?
+
+Let’s break it into substeps:
+
+1. **Receive the PDF file**.
+2. **Extract text from it**.
+3. **Parse skills from that text** (maybe as keywords like "JavaScript", "Node.js").
+4. **Store user info + skills into DB**.
+
+So… let’s first **discuss**:
+
+> 💭 Do you want the user to upload just the resume?  
+Or also give some basic info like `name`, `email`, etc. in the same request?
+
+You decide the flow. Then we’ll plan how to accept that in your route.

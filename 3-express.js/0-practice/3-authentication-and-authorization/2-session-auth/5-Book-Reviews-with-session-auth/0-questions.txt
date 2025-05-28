@@ -1,0 +1,43 @@
+### 🧪 **Task: Build a Simple “Book Reviews App” with session-based auth**
+
+#### 🧩 Requirements:
+
+1. **Auth System (Same as before):**
+   - Signup
+   - Login
+   - Logout
+   - Session tracking (userId stored in `req.session.userId`)
+
+2. **Books Table:**
+   ```sql
+   CREATE TABLE books (
+     id SERIAL PRIMARY KEY,
+     title VARCHAR(255) NOT NULL,
+     author VARCHAR(255) NOT NULL
+   );
+   ```
+
+3. **Reviews Table:**
+   ```sql
+   CREATE TABLE reviews (
+     id SERIAL PRIMARY KEY,
+     user_id INT REFERENCES users(id),
+     book_id INT REFERENCES books(id),
+     review TEXT NOT NULL,
+     rating INT CHECK (rating >= 1 AND rating <= 5),
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
+
+4. **Routes to build (all protected except signup/login):**
+   - `POST /books` → Add a new book  
+   - `GET /books` → List all books  
+   - `POST /reviews/:bookId` → Add a review to a book  
+   - `GET /reviews/:bookId` → See all reviews for a book  
+
+---
+
+🛠 Use sessions just like before.  
+If a user is not logged in, they **can’t** add books or post reviews.
+
+Let me know if you want to build this step-by-step — happy to guide you like we did with Notes & Todos!

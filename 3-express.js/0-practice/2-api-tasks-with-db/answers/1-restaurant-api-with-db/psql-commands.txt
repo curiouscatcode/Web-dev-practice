@@ -1,0 +1,22 @@
+postgres=# CREATE DATABASE restaurantdb;
+
+postgres=# \c restaurantdb
+You are now connected to database "restaurantdb" as user "postgres".
+ CREATE TABLE menu_items (
+ id SERIAL PRIMARY KEY,
+ name TEXT NOT NULL,
+ price NUMERIC(10,2) NOT NULL
+ );
+
+ CREATE TABLE orders(
+  id SERIAL PRIMARY KEY,
+  customer_name TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+CREATE TABLE order_items(
+ id SERIAL PRIMARY KEY,
+ order_id INT REFERENCES orders(id) ON DELETE CASCADE,
+ item_id INT REFERENCES menu_items(id),
+ quantity INT NOT NULL
+);

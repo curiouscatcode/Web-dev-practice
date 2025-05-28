@@ -1,0 +1,61 @@
+### **Blogging Platform API**  
+
+You need to build a **Blogging API** where users can create, read, update, and delete blog posts. Other users can read, like, comment, and search for blogs. The API should support the following functionalities:  
+
+---
+
+### **1. Blog Post Management (CRUD for Blog Posts)**  
+- **Create a blog post** with `title`, `content`, `tags`, `author_id`, and `published_status` (draft/published).  
+- **Update a blog post** (only the author should be able to edit).  
+- **Delete a blog post** (only the author should be able to delete).  
+- **Fetch all blog posts** (with pagination).  
+- **Fetch a single blog post by ID** (include comments and likes count).  
+- **Filter blog posts** by `author`, `tags`, or `published_status`.  
+
+---
+
+### **2. User Management**  
+- Users should be able to **register** and **log in**.  
+- Fetch user details (username, email, bio, profile picture).  
+- Update user details (except email).  
+
+---
+
+### **3. Comments & Likes**  
+- Users can **add a comment** to a blog post.  
+- Users can **edit or delete** their comments.  
+- Users can **like a blog post**.  
+- Fetch all comments for a blog post.  
+
+---
+
+### **4. Extra Features (Optional but Challenging 🚀)**  
+- Implement **search functionality** (search blogs by title or content).  
+- Implement **categories** for blogs (e.g., Technology, Sports, Lifestyle).  
+- Implement **slug-based URLs** (e.g., `/blog/how-to-learn-js`).  
+- Implement **featured blogs** (e.g., sort by most liked in the last 7 days).  
+
+---
+
+### **Database Tables (PostgreSQL)**  
+- `users (id, username, email, password, bio, profile_pic)`  
+- `blogs (id, title, content, author_id, tags, published_status, created_at)`  
+- `comments (id, blog_id, user_id, text, created_at)`  
+- `likes (id, blog_id, user_id, created_at)`  
+
+---
+
+### **Tech Stack**  
+- **Express.js** for API.  
+- **PostgreSQL** for database.  
+- **bcrypt** for password hashing.  
+- **JWT** for authentication.  
+
+---
+
+💡 **Goal:**  
+- Follow RESTful API best practices.  
+- Proper error handling & validation.  
+- Use authentication for protected routes.  
+
+🔥 Let me know if you need any hints! 🚀

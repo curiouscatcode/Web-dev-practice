@@ -1,0 +1,36 @@
+Awesome! Since you're done with the social media mini project, let's level up with a **new API challenge**. Here's your next one:
+
+---
+
+## 📦 **Mini E-commerce API**
+
+### 👨‍👩‍👧‍👦 **User Routes**
+1. **POST `/signup`** — Register user (name, email, password)  
+2. **POST `/login`** — Login and return JWT
+
+---
+
+### 🛍️ **Product Routes**
+3. **POST `/products`** _(Admin only)_ — Add a new product (`name`, `price`, `stock`, `description`)  
+4. **GET `/products`** — List all products  
+5. **GET `/products/:id`** — Get details of a product  
+6. **PATCH `/products/:id`** _(Admin only)_ — Update product info  
+7. **DELETE `/products/:id`** _(Admin only)_ — Delete a product
+
+---
+
+### 🛒 **Cart Routes**
+8. **POST `/cart`** _(protected)_ — Add item to cart (`product_id`, `quantity`)  
+9. **GET `/cart`** _(protected)_ — Get user's cart items  
+10. **DELETE `/cart/:product_id`** _(protected)_ — Remove item from cart
+
+---
+
+### 🧾 **Order Routes**
+11. **POST `/order`** _(protected)_ — Place order for current cart items  
+12. **GET `/orders`** _(protected)_ — Get all user orders  
+13. **GET `/orders/:id`** _(protected)_ — Get specific order details  
+
+---
+
+Would you like a suggested **DB schema** for this one too before you begin coding?

@@ -1,0 +1,51 @@
+Oho nice! You want a *new* CRUD API challenge with DB integration? Alright, let’s spice things up! 🌶️
+
+---
+
+### 🔥 **Q. Expense Tracker API**
+
+Build an API to help users track their daily expenses.
+
+---
+
+### 📦 **Entities:**
+
+#### ✅ User
+- `id`
+- `name`
+- `email`
+- `password` (hashed)
+
+#### ✅ Expense
+- `id`
+- `user_id` (FK)
+- `title` (e.g., "Groceries")
+- `amount` (float)
+- `category` (e.g., "Food", "Transport", "Shopping")
+- `date` (when the expense happened)
+
+---
+
+### 🔧 **Required API Endpoints:**
+
+#### User:
+- `POST /register` – Register new user and login 
+
+#### Expense:
+- `POST /expenses` – Add new expense 
+- `GET /expenses` – Get all expenses as per user
+- `GET /expenses/:id` – Get single expense
+- `PUT /expenses/:id` – Update an expense
+- `DELETE /expenses/:id` – Delete an expense
+
+---
+
+### ⚙️ Bonus Features (optional):
+- Filter expenses by date or category:  
+  `GET /expenses?category=food&startDate=2024-01-01&endDate=2024-12-31`
+- Monthly total spending calculation
+- Pagination in `GET /expenses`
+
+---
+
+Let me know when it's done and I’ll throw the next one at you like a boss fight 💣

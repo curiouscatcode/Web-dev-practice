@@ -1,0 +1,72 @@
+### **🚀 Next Challenge: Building a Movie Review API with JWT Authentication**
+
+This time, let’s build an API for a **movie review platform** where users can register, login, and post reviews for movies. The API should have features like rating movies, searching by genres, and managing user reviews.
+
+---
+
+#### **1. User Authentication & Authorization:**
+
+- **POST `/signup`** — Register a new user (name, email, password).
+- **POST `/login`** — Login and return a JWT for authentication.
+- **GET `/users/:id`** — Get details of a user by their ID (protected route).
+  
+---
+
+#### **2. Movie Management:**
+
+- **POST `/movies`** _(Admin only)_ — Add a new movie to the database (title, genre, description, release year, rating).
+- **GET `/movies`** — Get a list of all movies.
+- **GET `/movies/:id`** — Get details of a specific movie by its ID.
+- **PATCH `/movies/:id`** _(Admin only)_ — Edit movie details (e.g., update rating, description).
+- **DELETE `/movies/:id`** _(Admin only)_ — Delete a movie from the database.
+
+---
+
+#### **3. Movie Reviews:**
+
+- **POST `/movies/:id/reviews`** _(Protected)_ — Add a review for a movie. The review should include rating (1-10), text, and the user who is reviewing.
+- **GET `/movies/:id/reviews`** — Get all reviews for a specific movie.
+- **PATCH `/reviews/:id`** _(Protected, user must be the reviewer)_ — Edit a review.
+- **DELETE `/reviews/:id`** _(Protected, user must be the reviewer)_ — Delete a review.
+
+---
+
+#### **4. Ratings & Likes/Dislikes:**
+
+- **POST `/movies/:id/rate`** _(Protected)_ — Users can rate a movie from 1 to 10. If the user has already rated the movie, they can update their rating.
+- **POST `/movies/:id/like`** _(Protected)_ — Users can like a movie. Each user can only like a movie once.
+- **POST `/movies/:id/dislike`** _(Protected)_ — Users can dislike a movie. Each user can only dislike a movie once.
+
+---
+
+#### **5. Movie Genres:**
+
+- **POST `/genres`** _(Admin only)_ — Create new genres for categorizing movies.
+- **GET `/genres`** — Get all available genres.
+- **GET `/movies/genre/:genre`** — Get all movies in a specific genre.
+
+---
+
+#### **6. Search Functionality:**
+
+- **GET `/search`** — Search for movies based on title, genre, or rating range. (E.g., `/search?genre=action&rating_min=7&rating_max=10`)
+
+---
+
+#### **7. User Roles:**
+
+- **Admin Role:** Only an admin can add, edit, or delete movies, genres, and manage user reviews.
+- **Regular User:** Users can only create reviews, rate movies, and like/dislike movies.
+
+---
+
+### **Why This Challenge is Great:**
+- It’s a full-featured platform with real-world use cases.
+- You’ll dive into different kinds of relationships between entities (users, movies, genres, reviews, ratings).
+- It’ll involve more complex functionality like likes/dislikes, search filters, and managing multiple roles (admin vs. user).
+- You’ll practice handling JWT authentication and role-based access control.
+
+---
+
+### **Next Steps:**
+- Let me know if you need any help or further details. Happy coding! 🚀

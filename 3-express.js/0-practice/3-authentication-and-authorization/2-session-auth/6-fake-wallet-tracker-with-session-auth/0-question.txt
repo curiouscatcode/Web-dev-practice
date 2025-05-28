@@ -1,0 +1,55 @@
+## 💰 Project Task: Fake Wallet Tracker (Session Auth)
+
+### 📘 Overview:
+You're building a **Wallet Tracker** app where users can **track their income and expenses** securely. Users must be **logged in (session-based auth)** to access their data. The app will store and display each transaction and keep a running balance.
+
+---
+
+### 🎯 Objectives:
+
+1. **User Authentication**  
+   - Use sessions to handle login/logout (already done).
+
+2. **Transaction Management**  
+   Users can:
+   - 🔸 Add a transaction (`POST /transactions`)  
+     → Must specify `type` (`add` or `remove`) and `amount`. Optional: `note`.
+   - 🔸 View all their transactions (`GET /transactions`)
+   - 🔸 Delete a transaction (`DELETE /transactions/:id`)
+
+3. **Balance Calculation**  
+   - Create a route `GET /balance`  
+     → Returns current wallet balance (sum of transactions).  
+     → Automatically calculate by summing `add` and `remove` transactions.
+
+---
+
+### 🧾 Database Structure:
+
+```sql
+CREATE TABLE transactions (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users(id),
+  type VARCHAR(10) CHECK (type IN ('add', 'remove')),
+  amount INTEGER CHECK (amount > 0),
+  note TEXT,
+  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+### ✅ Example Flow:
+
+1. **Login as user**
+2. **Add**:  
+   POST `/transactions`  
+   Body: `{ type: 'add', amount: 500, note: 'Salary' }`
+3. **Add**:  
+   `{ type: 'remove', amount: 100, note: 'Snacks' }`
+4. **View all**:  
+   GET `/transactions`  
+5. **Check balance**:  
+   GET `/balance` → Should show 400  
+6. **Delete one transaction**  
+   DELETE `/transactions/:id`

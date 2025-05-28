@@ -1,0 +1,15 @@
+CREATE DATABASE todo_session_auth;
+
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(100) UNIQUE NOT NULL,
+	password TEXT NOT NULL
+);
+
+CREATE TABLE todos (
+	id SERIAL PRIMARY KEY,
+	user_id INT REFERENCES users(id),
+	content TEXT NOT NULL,
+	status VARCHAR(50) DEFAULT 'pending',
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

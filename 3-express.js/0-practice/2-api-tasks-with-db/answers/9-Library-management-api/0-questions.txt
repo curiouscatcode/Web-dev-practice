@@ -1,0 +1,31 @@
+### Next Task:  
+
+**Build a "Library Management API" with a database**  
+
+#### Features:  
+1. **Books API**  
+   - `POST /books` → Add a new book (title, author, genre, published_year).  
+   - `GET /books` → Get all books (with optional filtering by author, genre, year).  
+   - `GET /books/:id` → Get a specific book by ID.  
+   - `PUT /books/:id` → Update book details.  
+   - `DELETE /books/:id` → Remove a book.  
+
+2. **Users API**  
+   - `POST /users` → Register a new user (name, email, membership type).  
+   - `GET /users` → Get all users.  
+   - `GET /users/:id` → Get a specific user.  
+   - `PUT /users/:id` → Update user details.  
+   - `DELETE /users/:id` → Remove a user.  
+
+3. **Borrowing API**  
+   - `POST /borrow` → User borrows a book (user_id, book_id, borrow_date, return_date).  
+   - `GET /borrow` → Get all borrowed books.  
+   - `GET /borrow/:id` → Get a specific borrowed record.  
+   - `PUT /borrow/:id/return` → Mark a book as returned.  
+
+#### Bonus Features:  
+- Prevent users from borrowing the same book twice before returning it.  
+- Allow filtering borrowed books by user or book.  
+- Track overdue books.  
+
+Would you like a basic DB schema suggestion for this?

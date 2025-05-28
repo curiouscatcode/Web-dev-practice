@@ -1,0 +1,70 @@
+### 🍿 **Movie Review App – Session-Based Auth**
+
+**Goal:**  
+Build a simple web API where users can sign up, log in, and post reviews for movies. Only logged-in users can post, edit, or delete their own reviews.
+
+---
+
+### 🚧 Features to Build:
+
+1. **User Auth:**
+   - Signup ✅
+   - Login ✅
+   - Logout ✅
+   - Session middleware (reuse what you’ve learned)
+
+2. **Movie Routes (No auth needed):**
+   - `GET /movies` – List all movies
+   - `GET /movies/:id` – Get movie details
+
+3. **Review Routes (Auth Required):**
+   - `POST /movies/:id/reviews` – Add a review
+   - `PUT /reviews/:id` – Edit a review (only by author)
+   - `DELETE /reviews/:id` – Delete a review (only by author)
+
+4. **Extra:**
+   - `GET /movies/:id/reviews` – Get all reviews for a movie
+
+---
+
+### 🧱 Tables:
+
+```sql
+-- Users
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
+
+-- Movies
+CREATE TABLE movies (
+  id SERIAL PRIMARY KEY,
+  title TEXT NOT NULL,
+  description TEXT
+);
+
+-- Reviews
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id),
+  movie_id INT REFERENCES movies(id),
+  review TEXT NOT NULL,
+  rating INT CHECK (rating >= 1 AND rating <= 5)
+);
+```
+
+---
+
+### 🧪 Test Ideas (Postman):
+
+- Can a logged-out user add/edit/delete reviews? (No ❌)
+- Can a user delete someone else’s review? (No ❌)
+- Can a user review a movie? (Yes ✅)
+- Can you see all reviews for a movie? (Yes ✅)
+
+---
+
+Wanna add a fun twist later? Add a **like button for reviews** just like the recipe app 🍰
+
+Let me know when you're ready, or if you want a simplified or advanced version 😄

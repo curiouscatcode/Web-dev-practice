@@ -1,0 +1,60 @@
+## 🔐 **Auth (Signup, Login, Token Middleware)**
+
+1. 📝 **Create `POST /signup`**  
+   → Register a new user by hashing password and storing in the database.
+
+2. 🔑 **Create `POST /login`**  
+   → Authenticate user credentials, and return a JWT token in the response.
+
+3. 🛡️ **Create `requireAuth` middleware**  
+   → Extract JWT from `Authorization` header, verify it, and attach the user to `req`.
+
+4. 👤 **Create `GET /profile` (protected route)**  
+   → Return the logged-in user's information using the decoded JWT.
+
+---
+
+## 📝 **Post-related Routes**
+
+5. 📝 **Create `POST /posts` (protected)**  
+   → Allow logged-in user to create a blog post.
+
+6. 📖 **Create `GET /posts`**  
+   → Public route. Return a list of all blog posts.
+
+7. 🔍 **Create `GET /posts/:id`**  
+   → Public route. Return a single post by its ID.
+
+8. ✏️ **Create `PUT /posts/:id` (protected)**  
+   → Allow only the post's author to edit the post.
+
+9. 🗑️ **Create `DELETE /posts/:id` (protected)**  
+   → Allow only the post's author to delete the post.
+
+---
+
+## 💬 **Comment-related Routes**
+
+10. 💬 **Create `POST /posts/:id/comments` (protected)**  
+    → Allow logged-in users to comment on a post.
+
+11. 📄 **Create `GET /posts/:id/comments`**  
+    → Public. Return all comments for a specific post.
+
+12. ✏️ **Create `PUT /comments/:id` (protected)**  
+    → Allow only the comment’s author to edit their comment.
+
+13. 🗑️ **Create `DELETE /comments/:id` (protected)**  
+    → Allow only the comment’s author to delete their comment.
+
+---
+
+## 🧪 **Token Testing & Errors**
+
+14. ❌ **Try hitting a protected route without a token**  
+    → Should return a 401 Unauthorized error.
+
+15. 🕐 **Try hitting a protected route with an expired/invalid token**  
+    → Should return a meaningful error message.
+
+---

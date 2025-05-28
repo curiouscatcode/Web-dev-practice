@@ -1,0 +1,15 @@
+1. Intro
+  authentication = Who are you ?
+  authoriztion = What can you access / do ?
+
+2. Sessions & Cookies :- 
+  Cookies = 
+    - A small piece of data stored on client's browser. 
+    - Sent with every HTTP request to the servers
+    - Often used to identify or track the user 
+    - Eg: Set-cookie: session_id = abc123; Http only
+
+  Sessions = 
+    - It's a server side data that stores information about the user (like logged in status).
+    - When user logs in, the server creates a session & assigns it a unique ID (stored in a cookie).
+

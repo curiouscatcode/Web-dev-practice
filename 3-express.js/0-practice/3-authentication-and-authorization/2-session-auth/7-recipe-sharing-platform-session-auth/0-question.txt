@@ -1,0 +1,98 @@
+### **Recipe Sharing Platform with Session Authentication**
+
+**Goal**: Build a simple Recipe Sharing platform where users can:
+1. **Submit new recipes**.
+2. **View a list of recipes** submitted by all users.
+3. **Like/Dislike** recipes.
+4. **Comment on recipes**.
+5. **Log in, log out, and register** using session-based authentication.
+
+---
+
+### **Key Features and Requirements**:
+
+1. **User Registration**:
+   - Implement a signup route (`/signup`) where new users can create an account by providing their username, email, and password.
+   - The password should be hashed using a library like bcrypt for security.
+
+2. **User Login/Logout**:
+   - Implement login functionality (`/login`) where users can authenticate using their username/email and password.
+   - Use session-based authentication. When logged in, users should be able to access protected routes like submitting a recipe or viewing and commenting on recipes.
+   - Implement logout functionality (`/logout`) to end the session.
+
+3. **Recipe CRUD**:
+   - **Create Recipe**: Implement an endpoint (`/recipes`) where logged-in users can submit their own recipes. The recipe should have fields like `name`, `ingredients`, `steps`, and `author`.
+   - **View Recipes**: Implement an endpoint (`/recipes`) where all users can view the list of submitted recipes. Each recipe should display the author, name, and basic details.
+   - **Edit Recipe**: Allow users to edit their own recipes. Only the author should be able to edit their recipe.
+   - **Delete Recipe**: Allow users to delete their own recipes. Only the author should be able to delete their recipe.
+
+4. **Recipe Likes/Dislikes**:
+   - Implement functionality to allow users to like or dislike a recipe. Track the number of likes and dislikes for each recipe.
+   - Users should only be able to like/dislike a recipe once. If they’ve already liked or disliked a recipe, prevent them from liking or disliking it again.
+
+5. **Recipe Comments**:
+   - Implement a comment system for each recipe. Users should be able to leave comments on recipes. Each comment should be associated with a user and a recipe.
+   - Users should be able to delete their own comments.
+
+6. **Session Management**:
+   - Implement session-based authentication using cookies (via Express session or other methods).
+   - Make sure that users who are not logged in cannot submit recipes, like/dislike recipes, or comment on recipes.
+
+---
+
+### **Database Structure** (Suggested schema):
+
+- **Users Table**:
+  - `id`: INT (primary key)
+  - `username`: VARCHAR
+  - `email`: VARCHAR (unique)
+  - `password`: VARCHAR (hashed)
+  - `created_at`: TIMESTAMP
+
+- **Recipes Table**:
+  - `id`: INT (primary key)
+  - `name`: VARCHAR
+  - `ingredients`: TEXT
+  - `steps`: TEXT
+  - `author_id`: INT (foreign key referencing `users.id`)
+  - `created_at`: TIMESTAMP
+
+- **Comments Table**:
+  - `id`: INT (primary key)
+  - `recipe_id`: INT (foreign key referencing `recipes.id`)
+  - `user_id`: INT (foreign key referencing `users.id`)
+  - `comment`: TEXT
+  - `created_at`: TIMESTAMP
+
+- **Likes Table**:
+  - `id`: INT (primary key)
+  - `user_id`: INT (foreign key referencing `users.id`)
+  - `recipe_id`: INT (foreign key referencing `recipes.id`)
+  - `like_status`: BOOLEAN (TRUE for like, FALSE for dislike)
+
+---
+
+### **API Routes** (Suggested Endpoints):
+- `POST /signup` – Create a new user.
+- `POST /login` – Log a user in and create a session.
+- `POST /logout` – Log the user out.
+- `POST /recipes` – Submit a new recipe (only accessible if the user is logged in).
+- `GET /recipes` – Get a list of all recipes.
+- `GET /recipes/:id` – Get details of a specific recipe.
+- `PUT /recipes/:id` – Edit a recipe (only accessible by the user who submitted it).
+- `DELETE /recipes/:id` – Delete a recipe (only accessible by the user who submitted it).
+- `POST /recipes/:id/like` – Like a recipe.
+- `POST /recipes/:id/dislike` – Dislike a recipe.
+- `POST /recipes/:id/comment` – Add a comment to a recipe.
+- `DELETE /comments/:id` – Delete a comment (only accessible by the user who posted it).
+
+---
+
+### **Testing**:
+- Use **Postman** to test each route (Signup, Login, Recipe Creation, Commenting, Liking/Disliking, etc.).
+- Verify that users can only perform actions (e.g., editing, commenting) on their own recipes or comments.
+- Ensure that only logged-in users can submit or interact with recipes.
+
+---
+
+Let me know if this works or if you'd like any more details!

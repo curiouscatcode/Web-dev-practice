@@ -1,0 +1,39 @@
+CREATE DATABASE movie_review_api_with_jwt;
+
+CREATE TABLE users (
+	id SERIAL PRIMARY KEY,
+	name TEXT NOT NULL,
+	email TEXT UNIQUE NOT NULL,
+	password TEXT NOT NULL,
+	role TEXT DEFAULT 'user'
+);
+
+CREATE TABLE genres (
+	id SERIAL PRIMARY KEY,
+	name TEXT NOT NULL
+);
+
+CREATE TABLE movies (
+	id SERIAL PRIMARY KEY,
+	title TEXT NOT NULL,
+	description TEXT,
+	release_year INT NOT NULL,
+	rating NUMERIC DEFAULT 0,
+	genre_id INT REFERENCES genres(id)
+);
+
+CREATE TABLE reviews (
+	id SERIAL PRIMARY KEY,
+	movie_id INT REFERENCES movies(id),
+	user_id INT REFERENCES users(id),
+	rating NUMERIC DEFAULT 0,
+	review_text TEXT,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE likes (
+	id SERIAL PRIMARY KEY,
+	movie_id INT REFERENCES movies(id),
+	user_id INT REFERENCES users(id),
+	like_status BOOLEAN
+);

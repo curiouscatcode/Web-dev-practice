@@ -1,6 +1,7 @@
 npm init -y
 npm i express
 npm i nodemon
+TO RUN: nodemon app.js
 That's the right mindset! 💪 The more you practice, the stronger you’ll get. Here are **10 practice ideas** similar to the Joke API but with different topics:  
 
 ---

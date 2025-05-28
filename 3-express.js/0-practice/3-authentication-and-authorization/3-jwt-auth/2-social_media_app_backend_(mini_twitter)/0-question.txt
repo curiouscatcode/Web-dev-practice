@@ -1,0 +1,61 @@
+### 📸 **Next API Project: Social Media App Backend (Mini Twitter)**
+
+This one's fun, practical, and will push your skills further! Here’s your **feature checklist**:
+
+---
+
+#### 👤 User Routes
+
+1. **POST `/signup`**
+   - Create user (with `name`, `email`, `password`).
+
+2. **POST `/login`**
+   - Login and return JWT.
+
+---
+
+#### 📝 Post Routes (Tweets)
+
+3. **POST `/posts`** _(protected)_
+   - Create a new post (`content`).
+
+4. **GET `/posts`**
+   - Get all posts (latest first).
+
+5. **GET `/posts/:id`**
+   - Get post by ID with author info and likes count.
+
+6. **DELETE `/posts/:id`** _(only author)_
+   - Delete your own post.
+
+---
+
+#### ❤️ Like Routes
+
+7. **POST `/posts/:id/like`** _(protected)_
+   - Like or unlike a post (toggle).
+
+8. **GET `/posts/:id/likes`**
+   - Get list of users who liked the post.
+
+---
+
+#### 🗣️ Comment Routes
+
+9. **POST `/posts/:id/comments`** _(protected)_
+   - Add comment to post.
+
+10. **GET `/posts/:id/comments`**
+   - List all comments on a post.
+
+11. **DELETE `/comments/:id`** _(only author)_
+   - Delete own comment.
+
+---
+
+#### 🌟 Extra (Optional Challenges)
+
+- Search posts by keyword.
+- Show trending posts (most liked).
+- Rate limit posting (max 5 per hour).
+- Follow/unfollow users (if you want to level up more).

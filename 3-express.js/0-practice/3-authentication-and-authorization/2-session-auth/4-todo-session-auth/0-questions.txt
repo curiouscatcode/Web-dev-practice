@@ -1,0 +1,44 @@
+### 🔐 Task: **“Todo App with Session Authentication”**
+
+**📝 App Name**: `todo-session-auth`
+
+---
+
+### 📌 Features to Implement:
+
+1. **Signup & Login (Same as before)**  
+   - Store users in PostgreSQL (`id`, `name`, `password` hashed with bcrypt).
+
+2. **Protected Routes**:
+   - `POST /todos`: Add a new todo (only if logged in).
+     - Fields: `content`, optional `status` (default: "pending").
+   - `GET /todos`: Get all todos **only for the logged-in user**.
+   - `PATCH /todos/:id`: Update the `status` of a specific todo (e.g., to "completed").
+   - `DELETE /todos/:id`: Delete a todo.
+
+3. **Logout** route:
+   - `GET /logout` destroys the session.
+
+---
+
+### 🗃 Database Structure (PostgreSQL):
+
+```sql
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) UNIQUE NOT NULL,
+  password TEXT NOT NULL
+);
+
+CREATE TABLE todos (
+  id SERIAL PRIMARY KEY,
+  user_id INT REFERENCES users(id),
+  content TEXT NOT NULL,
+  status VARCHAR(50) DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+Let me know when you're ready to begin or if you'd like help with **Step 1: setting up the project folder + installing packages**.

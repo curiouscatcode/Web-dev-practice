@@ -1,0 +1,65 @@
+## 🧠 Here's a Better Idea:
+We’ll build a **session-based authentication system** around a small app idea.
+
+---
+
+### 💡 App Idea: "Club House App"
+
+A small app where:
+
+- People **sign up** to join the Club House.
+- Each person can belong to a **Club** (e.g., Book Club, Music Club).
+- Logged-in users can:
+  - View their profile
+  - See which **club** they belong to
+  - Change their **club**
+- Logged-out users can’t access anything.
+
+---
+
+### 🗃 Database Tables
+
+```sql
+CREATE TABLE clubs (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE members (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  club_id INTEGER REFERENCES clubs(id)
+);
+```
+
+---
+
+### 🔐 What You'll Learn:
+- Sessions
+- Cookies
+- Login/logout
+- Auth-protected routes
+- PostgreSQL joins
+- Password hashing (`bcryptjs`)
+
+---
+
+### 🧱 Tech Stack:
+- Express.js
+- `express-session`
+- `pg`
+- `bcryptjs`
+- `dotenv`
+
+---
+
+Shall we set up the project step-by-step now? Starting with:
+
+✅ 1. Project setup  
+✅ 2. Database + tables  
+✅ 3. Signup route  
+✅ 4. Login + sessions  
+✅ 5. Protected routes like `/profile` and `/change-club`
+
+Let me know if you're ready, and we’ll kick off from step 1!

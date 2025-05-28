@@ -1,0 +1,44 @@
+Alright! Here's your next challenge:  
+
+### **Build an API for a To-Do List 📝**  
+Create a simple **To-Do API** where users can:  
+1. **Create** a new task  
+2. **Get** all tasks  
+3. **Get** a single task by ID  
+4. **Update** a task (e.g., mark as completed)  
+5. **Delete** a task  
+
+---
+
+### **Routes to Define**  
+| Method | Route             | Description                 |
+|--------|------------------|-----------------------------|
+| **POST**   | `/api/todos`        | Create a new task          |
+| **GET**    | `/api/todos`        | Get all tasks              |
+| **GET**    | `/api/todos/:id`    | Get a specific task by ID  |
+| **PUT**    | `/api/todos/:id`    | Update a task              |
+| **DELETE** | `/api/todos/:id`    | Delete a task              |
+
+---
+
+### **Database Schema (PostgreSQL)**  
+```sql
+CREATE TABLE todos (
+    id SERIAL PRIMARY KEY,
+    task TEXT NOT NULL,
+    completed BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+### **Your Task**  
+1. **Set up Express and PostgreSQL (same as before).**  
+2. **Create the `todos` table using the schema above.**  
+3. **Write routes & functions for CRUD operations.**  
+4. **Test it using Postman!**  
+
+---
+
+Want a hint for any step, or do you want to try it all yourself? 😃

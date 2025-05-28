@@ -1,0 +1,33 @@
+Great progress! Now, let's move to the next challenge.  
+
+### **Challenge 6: Orders Management API**  
+📌 **Goal:** Build a simple API to manage customer orders for an online store.  
+
+#### **Requirements:**  
+1. **Create a database `ordersdb`** with a table `orders` having the following columns:  
+   - `id` (Primary Key, Auto-increment)  
+   - `customer_name` (VARCHAR)  
+   - `product_name` (VARCHAR)  
+   - `quantity` (INTEGER)  
+   - `status` (VARCHAR, default: 'pending')  
+   - `created_at` (TIMESTAMP, default: NOW())  
+
+2. **Routes to Implement:**  
+   - `POST /orders` → Add a new order  
+   - `GET /orders` → Get all orders  
+   - `GET /orders/:id` → Get a specific order by `id`  
+   - `PUT /orders/:id` → Update an order (change status, quantity, etc.)  
+   - `DELETE /orders/:id` → Delete an order  
+
+3. **Extra Features (Optional but Recommended):**  
+   - Implement **filtering** by `customer_name` and `status` in `GET /orders`.  
+   - Add **sorting** by `created_at` (ascending/descending).  
+   - Use **transactions** for `POST` and `PUT` requests to ensure data integrity.  
+
+#### **Hints:**  
+- Follow the structure you used in your previous projects.  
+- Use `pg` for PostgreSQL integration.  
+- Handle errors properly (`try-catch`).  
+- Test everything in **Postman**.  
+
+Let me know if you need any hints or guidance while building this! 🚀

@@ -1,0 +1,34 @@
+1. 🍽️ Restaurant Menu and Orders API
+  Tables:
+
+  menu_items (id, name, price)
+
+  orders (id, customer_name, created_at)
+
+  order_items (order_id, item_id, quantity)
+
+  Endpoints:
+
+  1. Input the items in menu_items (POST)
+
+  2.a. Get all the items from menu_items (GET)
+
+  2.b. Get an item from menu_items (GET)
+
+  3. Update an item (PUT)
+
+  4. Delete an item (DELETE)
+
+  5. Add orders made by customers in orders table (POST)
+
+  6. Read all the orders (READ)
+
+  7. Add data in order_items table (POST)
+
+  Place an order with multiple items
+
+  Get total price of order
+
+  List all orders with items
+
+  🧠 New Concept: transactions, subtotal calculations

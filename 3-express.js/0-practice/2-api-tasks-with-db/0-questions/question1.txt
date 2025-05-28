@@ -1,0 +1,32 @@
+Got it! Here’s your challenge:  
+
+### **🚀 Full-Stack Challenge: Build a CRUD API with PostgreSQL**  
+
+#### **Task:**  
+Build a REST API using **Express.js** and **PostgreSQL** that manages a **"Tasks"** system.  
+
+#### **Requirements:**  
+1. **Set up an Express.js server.**  
+2. **Connect your server to a PostgreSQL database.**  
+3. **Create a table `tasks`** with the following columns:  
+   - `id` (integer, primary key, auto-increment)  
+   - `title` (text, required)  
+   - `description` (text, optional)  
+   - `completed` (boolean, default: `false`)  
+   - `created_at` (timestamp, default: current time)  
+
+#### **Implement the following CRUD operations:**  
+✅ **Create:** `POST /tasks` → Add a new task to the database.  
+✅ **Read:**  
+   - `GET /tasks` → Retrieve all tasks.  
+   - `GET /tasks/:id` → Get a specific task by ID.  
+✅ **Update:** `PUT /tasks/:id` → Modify a task's title, description, or completion status.  
+✅ **Delete:** `DELETE /tasks/:id` → Remove a task from the database.  
+
+### **Bonus Challenges:**  
+🔥 Implement pagination for `GET /tasks` (limit & offset).  
+🔥 Allow filtering tasks by **completed** status (`?completed=true`).  
+🔥 Add validation to prevent empty title fields.  
+
+---  
+**No code from me!** 😁 You try to build it step by step. Let me know when you’re stuck or need hints! 🚀

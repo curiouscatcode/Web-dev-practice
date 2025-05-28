@@ -1,0 +1,43 @@
+Awesome! 🚀 Now for your **next API challenge**:  
+
+### **📌 Task 3: Build a Notes API 📝**  
+Create an API to manage **notes**, where each note has:  
+- `id` (Primary Key, auto-increment)  
+- `title` (Text, Required)  
+- `content` (Text, Required)  
+- `created_at` (Timestamp, Default: Current Time)  
+- `updated_at` (Timestamp, Updated on Edit)  
+
+---
+
+### **📌 Database Schema (PostgreSQL)**
+```sql
+CREATE TABLE notes (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);
+```
+
+---
+
+### **📌 Routes to Implement**  
+| Method | Route | Description |
+|--------|----------------|-------------------------|
+| **POST**   | `/api/notes`         | Create a new note |
+| **GET**    | `/api/notes`         | Get all notes |
+| **GET**    | `/api/notes/:id`     | Get a single note by ID |
+| **PUT**    | `/api/notes/:id`     | Update a note (title & content) |
+| **DELETE** | `/api/notes/:id`     | Delete a note |
+
+---
+
+### **📌 Extra Challenges**
+🔥 **Add sorting** (`?sort=asc/desc` by `created_at`)  
+🔥 **Add filtering** (`?search=keyword` to find notes by title/content)  
+
+---
+
+Let me know if you need **hints** or want to tackle this on your own! 💪🚀

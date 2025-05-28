@@ -1,0 +1,62 @@
+Awesome! Here's your next **CRUD-based project task** — a bit more advanced and different from your previous ones:
+
+---
+
+### 💼 12. **Build a Resume Parser & Job Matcher API**
+
+#### 🧠 Goal:
+Create an API that can:
+1. **Upload a resume (PDF)**
+2. **Parse** the resume and extract key details (like name, email, skills, experience)
+3. **Compare** extracted skills with job listings in your database
+4. **Return matching jobs** based on skills
+
+---
+
+### 📦 Features to implement:
+
+#### ✅ Resume Upload:
+- `POST /upload-resume`  
+  Upload a PDF resume and store it temporarily.
+
+#### ✅ Parse Resume:
+- Use `pdf-parse` (Node.js) or `PyMuPDF` (Python) to extract:
+  - Name
+  - Email
+  - Phone
+  - Skills
+
+#### ✅ Add Jobs to DB:
+- `POST /jobs`  
+  Add job listings with required skills.
+
+#### ✅ Match Resume to Jobs:
+- `GET /match/:user_id`  
+  Compare user's skills (from resume) with jobs in DB.
+  Return list of best-matching jobs.
+
+---
+
+### 🗃 Suggested Tables:
+#### 1. **users**
+| id | name | email | parsed_skills |
+|----|------|-------|----------------|
+
+#### 2. **jobs**
+| id | title | company | required_skills |
+
+---
+
+### 🤔 Bonus Ideas:
+- Add `match_score` (how well the resume matches the job)
+- Recommend top 3 jobs
+- Use tags or keywords for better matching
+
+---
+
+Let me know if you want:
+- 📄 Starter code
+- 🧠 Help parsing specific parts of the resume
+- 💡 Logic for matching
+
+You're doing amazing so far — this one's a fun jump into real-world use cases 🚀

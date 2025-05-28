@@ -1,0 +1,20 @@
+body {
+  min-height: 90vh;
+  background-color: lightblue;
+  margin: 0px;
+}
+
+header {
+  min-width: 100%;
+  background-color: white;
+  margin-top: 2vh;
+  height: 25vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-1 {
+  position: absolute;
+  height: 10vh;
+  width: 10vw;
+}

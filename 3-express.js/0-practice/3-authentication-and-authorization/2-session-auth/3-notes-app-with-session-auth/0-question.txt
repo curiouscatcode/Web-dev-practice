@@ -1,0 +1,38 @@
+### 🎯 Task: **Build a Simple “Notes App” with Session Auth**
+
+#### 💡 Idea:
+Only logged-in users can create and view their personal notes. Each user sees **only their own notes**.
+
+---
+
+### 🛠️ Features to build:
+
+1. **Signup & Login**  
+   - Store users in PostgreSQL  
+   - Use sessions for login tracking  
+
+2. **Create Note**  
+   - POST `/notes` → Only accessible when logged in  
+   - Each note linked to the logged-in user's ID
+
+3. **View Notes**  
+   - GET `/notes` → Shows only the notes of that user
+
+4. **Logout**
+
+---
+
+### 🗃️ Database Tables:
+- `users` (same as before)
+- `notes`  
+  ```
+  id (PK)
+  user_id (FK → users.id)
+  content (TEXT)
+  created_at (timestamp)
+  ```
+
+---
+
+Want to start step-by-step again?  
+Let me know — I’ll guide you through **Step 1: Project setup + table design** next. 🧱

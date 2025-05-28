@@ -1,0 +1,43 @@
+## 🔐 Project Title: **Blog Platform with Session Auth**
+
+### 📦 Tables You’ll Need:
+
+#### 1. `users` (you already have this!)
+```sql
+CREATE TABLE users 
+```
+
+#### 2. `posts`
+```sql
+CREATE TABLE posts 
+```
+
+#### 3. `comments`
+```sql
+CREATE TABLE comments 
+
+---
+
+## 📌 API Routes (Questions Only):
+
+### 👤 Authentication
+1. `POST /signup` – Sign up a new user  
+2. `POST /login` – Log in an existing user  
+3. `POST /logout` – Log out the current user  
+
+---
+
+### 📝 Posts
+4. `POST /posts` – Create a blog post (only if logged in)  
+5. `GET /posts` – Get all posts  
+6. `GET /posts/:id` – Get a single post by ID  
+7. `PUT /posts/:id` – Update a post (only if logged in and author)  
+8. `DELETE /posts/:id` – Delete a post (only if logged in and author)  
+
+---
+
+### 💬 Comments
+9. `POST /posts/:id/comments` – Add a comment to a post (only if logged in)  
+10. `GET /posts/:id/comments` – Get all comments on a post  
+11. `PUT /comments/:id` – Edit a comment (only if logged in and author)  
+12. `DELETE /comments/:id` – Delete a comment (only if logged in and author)  

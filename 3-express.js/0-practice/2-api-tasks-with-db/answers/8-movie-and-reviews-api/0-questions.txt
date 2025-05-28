@@ -1,0 +1,37 @@
+### **Movie Review API** 🎬 
+Create an API where users can add and manage movie reviews.  
+
+Your database should have at least two tables:  
+
+### **1. Movies Table**  
+- `id` (Primary Key)  
+- `title`  
+- `director`  
+- `release_year`  
+- `genre`  
+- `created_at`  
+- `updated_at`  
+
+### **2. Reviews Table**  
+- `id` (Primary Key)  
+- `movie_id` (Foreign Key referencing Movies)  
+- `user` (Reviewer's name or user ID if using authentication)  
+- `rating` (e.g., 1-10 or 1-5 scale)  
+- `comment`  
+- `created_at`  
+- `updated_at`  
+
+#### **Endpoints:**  
+1. **POST `/movies`** – Add a new movie (title, director, release year, genre).  
+2. **GET `/movies`** – Get a list of all movies.  
+3. **GET `/movies/:id`** – Get details of a specific movie.  
+4. **PUT `/movies/:id`** – Update movie details.  
+5. **DELETE `/movies/:id`** – Remove a movie.  
+6. **POST `/movies/:id/reviews`** –  Add a review to a movie (user, rating, comment) 
+7. **GET `/movies/:id/reviews`** – Get all reviews for a movie.  
+8. **GET `/movies?genre=comedy&minRating=8`** – Filter movies by genre and rating.  
+
+#### **Bonus Features:**  
+- Sort movies by highest-rated.  
+- Allow users to update/delete their reviews.  
+- Add authentication so only logged-in users can review movies. 
