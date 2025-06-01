@@ -1,0 +1,24 @@
+### 🧩 Mini Project: Simple Todo App (No UI, Just Logic)
+
+**Objective:** Use array methods to implement the logic of a basic todo list.
+
+```js
+let todos = [
+  { id: 1, task: "Learn React", completed: false },
+  { id: 2, task: "Practice JS array methods", completed: true },
+  { id: 3, task: "Read a book", completed: false },
+];
+```
+
+Now write small functions for the following:
+
+1. ✅ **Get all completed tasks**
+2. 🔍 **Find task by id**
+3. 🚫 **Remove a task by id**
+4. ➕ **Add a new task (uncompleted by default)**
+5. 🔁 **Toggle a task’s completed status**
+6. 📋 **Get a list of only task names sorted alphabetically**
+
+---
+
+If you can do this comfortably, then you’re in great shape for building dynamic components in React soon!

@@ -1,0 +1,14 @@
+why is .reduce() used ? 
+
+.reduce() is used to "reduce" an array into a single value — like a number, object, or string — by processing each element.
+
+array.reduce((accumulator, currentValue) => {
+  // logic
+  return updatedAccumulator;
+}, initialValue);
+
+- accumulator: collects the result
+
+- currentValue: current item in the array
+
+- initialValue: starting value for accumulator

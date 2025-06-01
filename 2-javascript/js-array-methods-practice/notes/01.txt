@@ -1,0 +1,44 @@
+// .some() v/s .filter() 
+
+### ✅ `.filter()`:
+
+> **Use it when you want the actual items that match a condition.**
+
+It returns a **new array** with **all items** that pass the test.
+
+#### Example:
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+const even = numbers.filter(num => num % 2 === 0);
+// Output: [2, 4]
+```
+
+---
+
+### ✅ `.some()`:
+
+> **Use it when you only care if at least one item matches the condition.**
+
+It returns a **boolean**: `true` or `false`.
+
+#### Example:
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+const hasEven = numbers.some(num => num % 2 === 0);
+// Output: true
+```
+
+---
+
+### 🔁 Summary:
+
+| Use Case                        | Method      | Returns           |
+| ------------------------------- | ----------- | ----------------- |
+| Need the matching items         | `.filter()` | Array of items    |
+| Just want to check if any match | `.some()`   | `true` or `false` |
+
+---
+
+Let me know if you want examples using React state too — many array methods like `.map()`, `.filter()`, and `.some()` are super useful there!

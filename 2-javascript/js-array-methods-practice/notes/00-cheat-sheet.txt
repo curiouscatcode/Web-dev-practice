@@ -1,0 +1,70 @@
+## 🔁 **Iteration & Transformation Methods**
+
+| Method          | What It Does                                      | Returns                            |
+| --------------- | ------------------------------------------------- | ---------------------------------- |
+| `forEach()`     | Executes a function on each element (like a loop) | `undefined`                        |
+| `map()`         | Transforms each item and returns a **new array**  | New array of same length           |
+| `filter()`      | Filters elements that pass a condition            | New array (length ≤ original)      |
+| `find()`        | Finds **first** element that matches condition    | The element or `undefined`         |
+| `findIndex()`   | Like `find()`, but returns index                  | Index or `-1`                      |
+| `some()`        | Checks **if any** item passes the test            | `true` or `false`                  |
+| `every()`       | Checks if **all** items pass the test             | `true` or `false`                  |
+| `reduce()`      | Accumulates a single value from array elements    | Single value (number, array, etc.) |
+| `reduceRight()` | Same as reduce, but starts from the right         | Single value                       |
+
+---
+
+## 🔢 **Sorting and Rearranging**
+
+| Method      | What It Does                                | Returns                 |
+| ----------- | ------------------------------------------- | ----------------------- |
+| `sort()`    | Sorts array **in place** (mutates original) | The same sorted array   |
+| `reverse()` | Reverses array **in place**                 | The same reversed array |
+| `flat()`    | Flattens nested arrays                      | New flattened array     |
+| `flatMap()` | Maps + flattens one level                   | New array               |
+
+---
+
+## ➕ ➖ **Adding or Removing Elements**
+
+| Method      | What It Does                            | Returns                   |
+| ----------- | --------------------------------------- | ------------------------- |
+| `push()`    | Adds item(s) to end                     | New length of array       |
+| `pop()`     | Removes last item                       | Removed item              |
+| `shift()`   | Removes first item                      | Removed item              |
+| `unshift()` | Adds item(s) to start                   | New length of array       |
+| `splice()`  | Adds/removes/replaces items at index    | Removed elements (if any) |
+| `slice()`   | Returns shallow copy (selected portion) | New array                 |
+
+---
+
+## 🔍 **Searching & Checking**
+
+| Method          | What It Does                         | Returns           |
+| --------------- | ------------------------------------ | ----------------- |
+| `includes()`    | Checks if value exists               | `true` or `false` |
+| `indexOf()`     | Finds index of a value (first match) | Index or `-1`     |
+| `lastIndexOf()` | Like indexOf, starts from end        | Index or `-1`     |
+
+---
+
+## 📏 **Utility**
+
+| Method         | What It Does                           | Returns             |
+| -------------- | -------------------------------------- | ------------------- |
+| `join()`       | Joins array elements into string       | String              |
+| `toString()`   | Converts array to string               | String              |
+| `isArray()`    | Checks if value is an array            | `true` or `false`   |
+| `concat()`     | Merges arrays                          | New array           |
+| `fill()`       | Fills array with a value               | Modified array      |
+| `copyWithin()` | Copies part of array inside itself     | Modified array      |
+| `entries()`    | Returns array iterator \[index, value] | Iterator object     |
+| `keys()`       | Returns array iterator of keys         | Iterator object     |
+| `values()`     | Returns array iterator of values       | Iterator object     |
+| `at()`         | Accesses item at index (supports -ve)  | Value at that index |
+
+---
+
+### ⚡ Want a cheat sheet or practice problems on any specific group (e.g., filter/map/reduce)?
+
+Let me know and I’ll make one!
