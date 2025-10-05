@@ -5,9 +5,11 @@ const mongoose = require("mongoose");
 const Product = require("./modals/product.model.js"); // models
 const productRoute = require("./routes/product.route.js");
 
+require("dotenv").config();
+
 // initiallisation
 const app = express();
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 app.use(express.json()); // middleware
 app.use(express.urlencoded({ extended: false }));
 
@@ -119,7 +121,7 @@ mongoose
   .then(() => {
     console.log("Connected to the db !");
     app.listen(3000, () => {
-      console.log(`Listening to the server on ${PORT}`);
+      console.log(`Listening to the server on ${process.env.PORT}`);
     });
   })
   .catch(() => {
