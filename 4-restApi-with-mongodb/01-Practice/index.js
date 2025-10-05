@@ -125,5 +125,5 @@ mongoose
     });
   })
   .catch(() => {
-    console.log("Connection failed !");
+    console.log("Connection failed !", err);
   });
