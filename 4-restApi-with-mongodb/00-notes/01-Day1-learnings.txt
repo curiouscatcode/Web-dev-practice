@@ -1,0 +1,10 @@
+1. mongoose command ".findByIdAndUpdate()" is usually a patch method. 
+2. To do complete "PUT" method , these are the methods:=  
+    a. extract the id 
+    b. inside the try and catch, use .findById() to find the book 
+    c. check edge case for book does exists 
+    d. check edge case for required fields not be inputed 
+    e. get required fields 
+    f. get Optional fields (with if case)
+    g. save it using .save() 
+    h. Now, inside the catch method we will do edge cases of "CastError" and "ValidationError" 
