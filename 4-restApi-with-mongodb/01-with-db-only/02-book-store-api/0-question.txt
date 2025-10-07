@@ -40,3 +40,5 @@ MADE USING CHATGPT
    * Track which books a user purchased and allow adding/removing from the user’s purchased list.
 
 ---
+
+Learning again by trying 
