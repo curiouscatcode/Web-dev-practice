@@ -113,6 +113,28 @@ router.patch("/:id", async (req, res) => {
 });
 
 //  5. Delete an author by ID.
-router.delete("/:id", async (req, res) => {});
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const author = await Author.findByIdAndDelete(id);
+
+    if (!author) {
+      return res.status(400).json({
+        message: `No author with id:${id} found !`,
+      });
+    }
+
+    res.status(200).json({
+      message: `Author with id: ${id} deleted successfully !`,
+      author: author,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
 
 module.exports = router;
