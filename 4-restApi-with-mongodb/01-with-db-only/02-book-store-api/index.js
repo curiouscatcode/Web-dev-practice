@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 /** @type {import('mongoose').Model} */
 const Book = require("./models/books.model.cjs");
 
+const Author = require("./models/author.model.js");
+
+const authorRoute = require("./routers/authors.routes.js");
+
 // Testing
 
 const app = express();
@@ -14,6 +18,8 @@ require("dotenv").config();
 app.get("/", (req, res) => {
   res.send("Welcome to Book store API with mongoDB !");
 });
+
+// -------------------------------------BOOKS_API-------------------------------------------------
 
 // 1. List all books.
 app.get("/api/books", async (req, res) => {
@@ -85,7 +91,7 @@ app.post("/api/books", async (req, res) => {
     if (err.name === "ValidationError") {
       // collect missing field
       const messages = Object.values(err.errors).map((e) => e.message);
-      return res.status(500).json({
+      return res.status(422).json({
         message: "All required filleds must be filled !",
         error: messages,
       });
@@ -215,6 +221,10 @@ app.delete("/api/books/:id", async (req, res) => {
     });
   }
 });
+
+// --------------------------Author-API---------------------------------------------------
+
+app.use("/api/authors", authorRoute);
 
 mongoose
   .connect(process.env.MONGO_URI)
