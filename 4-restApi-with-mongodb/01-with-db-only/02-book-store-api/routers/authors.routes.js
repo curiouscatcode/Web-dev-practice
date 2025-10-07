@@ -25,6 +25,35 @@ router.get("/", async (req, res) => {
   }
 });
 
+//  2. Get details of a single author by ID.
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const author = await Author.findById(id);
+
+    if (!author) {
+      return res.status(400).json({
+        message: `No author with id:${id} exists !`,
+      });
+    }
+
+    res.status(200).json(author);
+  } catch (err) {
+    console.error(err);
+
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: "Invalid id type",
+        error: err,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
 //  3. Add a new author.
 router.post("/", async (req, res) => {
   try {
@@ -47,9 +76,6 @@ router.post("/", async (req, res) => {
     });
   }
 });
-
-//  2. Get details of a single author by ID.
-router.get("/:id", async (req, res) => {});
 
 //  4. Update an existing author by ID.
 router.patch("/:id", async (req, res) => {});
