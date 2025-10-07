@@ -78,7 +78,39 @@ router.post("/", async (req, res) => {
 });
 
 //  4. Update an existing author by ID.
-router.patch("/:id", async (req, res) => {});
+router.patch("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const updatedAuthor = await Author.findByIdAndUpdate(id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedAuthor) {
+      return res.status(400).json({
+        message: `No author with id:${id} exists !`,
+      });
+    }
+
+    res.status(202).json({
+      message: "Here's the updated data: ",
+      author: updatedAuthor,
+    });
+  } catch (err) {
+    console.error(err);
+
+    if (err.name === "CastError") {
+      return res.status(404).json({
+        message: "Invalid id !",
+        error: err,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
 
 //  5. Delete an author by ID.
 router.delete("/:id", async (req, res) => {});
