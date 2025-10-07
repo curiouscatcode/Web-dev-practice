@@ -1,8 +1,29 @@
 const express = require("express");
 const Author = require("../models/author.model.js");
-const mongoose = require("mongoose");
+/** @type {import('mongoose').Model} */
 
 const router = express.Router();
+
+//  1. List all authors.
+router.get("/", async (req, res) => {
+  try {
+    const author = await Author.find();
+
+    if (!author) {
+      return res.status(400).json({
+        message: "No author exists !",
+      });
+    }
+
+    res.status(200).json(author);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
 
 //  3. Add a new author.
 router.post("/", async (req, res) => {
@@ -25,11 +46,6 @@ router.post("/", async (req, res) => {
       error: err,
     });
   }
-});
-
-//  1. List all authors.
-router.get("/", async (req, res) => {
-  res.status(200).send("Author api working !");
 });
 
 //  2. Get details of a single author by ID.
