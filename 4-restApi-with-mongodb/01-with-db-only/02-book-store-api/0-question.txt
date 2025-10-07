@@ -17,11 +17,11 @@ MADE USING CHATGPT
 
    * Build APIs to:
 
-     1. List all authors.
-     2. Get details of a single author by ID.
-     3. Add a new author.
-     4. Update an existing author by ID.
-     5. Delete an author by ID.
+     1. List all authors. ✅  
+     2. Get details of a single author by ID. ✅
+     3. Add a new author. ✅
+     4. Update an existing author by ID. ✅
+     5. Delete an author by ID. ✅
 
 3. **Users**
 
