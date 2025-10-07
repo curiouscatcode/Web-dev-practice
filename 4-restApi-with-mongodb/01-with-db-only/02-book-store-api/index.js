@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 /** @type {import('mongoose').Model} */
 const Book = require("./models/books.model.cjs");
-const e = require("express");
 
 const app = express();
 app.use(express.json()); // middleware to parse JSON
