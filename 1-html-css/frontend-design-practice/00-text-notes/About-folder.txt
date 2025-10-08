@@ -1,0 +1,10 @@
+This folder will have me trying to get better at frontend design. 
+My goal is to become very good at this. 
+For, that i have planned to something. The plan seems like this: 
+
+- Read a book: "Designing with mind in mind" or "hooked" or both 
+- (Reading alone won't help) Practice one specific components in different styles.
+  I will be practicing one component in different styles and later i am comfortable in 
+  everything i will start practicing making full landing pages again. 
+
+👍

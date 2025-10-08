@@ -1,0 +1,186 @@
+ALL THE THINGS THAT NEEDS TO BE DONE: 
+
+
+## **1️⃣ Basic Components**
+
+* **Buttons**
+
+  * Primary / Secondary / Tertiary
+  * Hover / Active / Focus states
+  * Disabled state
+  * With icons
+
+* **Input Fields / Forms**
+
+  * Text / Password / Email / Number / Date / Search
+  * Textarea
+  * Dropdown / Select menu
+  * Radio buttons / Checkboxes / Toggles
+  * Validation / error messages
+
+* **Typography**
+
+  * Headings (H1–H6)
+  * Paragraph / Body text
+  * Lists (ordered/unordered)
+  * Quotes / callouts
+  * Text emphasis / badges
+
+* **Cards**
+
+  * Simple card (image + text + CTA)
+  * Product / Profile card
+  * Card with hover effects / shadow
+  * Expandable / flip card
+
+---
+
+## **2️⃣ Medium Components (Grouped / Layout Elements)**
+
+* **Navigation**
+
+  * Navbar / Top menu
+  * Sidebar / Drawer
+  * Breadcrumbs
+  * Pagination / Stepper
+
+* **Modals / Popups / Dialogs**
+
+  * Simple modal
+  * Confirmation dialog
+  * Form inside modal
+  * Tooltips / Help popovers
+
+* **Lists & Tables**
+
+  * Simple list / item list
+  * Table with header + sortable rows
+  * Filterable / searchable table
+  * Pagination
+
+* **Hero / Banner Sections**
+
+  * Hero with image + CTA
+  * Hero with video / illustration
+  * Text-only hero
+
+* **Forms with Multiple Fields**
+
+  * Signup / Login forms
+  * Multi-step forms / wizards
+  * Search filters
+
+---
+
+## **3️⃣ Advanced Components (Interactive / Dynamic)**
+
+* **Carousels / Sliders**
+
+  * Image slider / Product carousel / Testimonial slider
+  * Auto-slide + manual controls
+  * Indicators / thumbnails
+
+* **Search / Autocomplete**
+
+  * Input with suggestion dropdown
+  * Highlight matched results
+
+* **Tabs / Accordion / Expandable Sections**
+
+  * FAQ accordion
+  * Tabbed content / content switcher
+
+* **Notifications / Toasts / Alerts**
+
+  * Success / Error / Warning / Info
+  * Auto-dismiss / interactive
+  * Sliding or fading notifications
+
+* **Progress Indicators**
+
+  * Loading spinner / Skeleton screens
+  * Progress bar / step indicator
+
+* **Data Visualization / Dashboard Widgets**
+
+  * Charts / graphs (bar, line, pie, donut)
+  * Statistic cards / KPIs
+  * Activity feeds / tables with filters
+
+---
+
+## **4️⃣ Motion / Animation / Microinteractions**
+
+* **Button interactions**
+
+  * Hover scale, color change, ripple effect
+* **Card / Image hover**
+
+  * Elevation / shadow / rotation / scaling
+* **Modals & Popups**
+
+  * Fade-in / slide-in / bounce / grow
+* **Page transitions**
+
+  * Fade between pages / slide / reveal
+* **Scroll animations**
+
+  * Elements appearing on scroll
+  * Parallax / background movement
+* **Form field feedback**
+
+  * Shake on error / success highlight
+* **Toggle / Switch animations**
+* **SVG & Canvas animations**
+
+  * Animated icons, loaders, graphs
+  * Interactive buttons or backgrounds
+
+---
+
+## **5️⃣ Graphics & Vector Elements**
+
+* **SVG elements**
+
+  * Icons, shapes, charts, illustrations
+  * Animating SVG paths
+* **Canvas (HTML5)**
+
+  * Interactive drawings / particle effects
+  * Mini-games or simulations
+  * Dynamic graphs / data visualization
+* **Images / Media**
+
+  * Responsive images, lazy loading
+  * Background videos / hero animations
+  * Image filters / hover effects
+
+---
+
+## **6️⃣ Core Design & UX Concepts**
+
+* **Spacing / Margin / Padding**
+* **Visual hierarchy (size, color, emphasis)**
+* **Gestalt principles (proximity, similarity, closure)**
+* **Color theory & contrast / accessibility**
+* **Typography hierarchy & readability**
+* **Responsiveness / breakpoints / flexbox / grid**
+* **State management in UI** (hover, focus, disabled, loading, error)
+* **Reusability / component composition / design systems**
+* **Psychology principles**
+
+  * Cognitive load, attention, memory, nudges, choice overload
+* **Microinteractions & feedback loops**
+
+---
+
+## **💡 Suggested Practice Strategy**
+
+1. **Pick one component or concept at a time**
+2. **Build multiple variations** (colors, spacing, typography, motion)
+3. **Apply motion / animation where possible**
+4. **Reflect**: What works? What improves UX?
+5. **Combine components** after mastering basic + medium + advanced
+6. **Use SVG & Canvas** for interactive or animated elements
+
+---
