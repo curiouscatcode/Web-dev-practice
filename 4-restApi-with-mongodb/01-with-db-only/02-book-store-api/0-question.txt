@@ -27,7 +27,7 @@ MADE USING CHATGPT
 
    * Build APIs to:
 
-     1. Register a new user.
+     1. Register a new user. ✅
      2. Get details of a user by ID.
      3. Update user information by ID.
      4. Delete a user by ID.
