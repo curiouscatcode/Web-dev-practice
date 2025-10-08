@@ -125,5 +125,31 @@ router.patch("/:id", async (req, res) => {
 });
 
 //  4. Delete a user by ID.
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const user = await User.findByIdAndDelete(id);
+    if (!user) {
+      return res.status(404).json({
+        message: `No user with id:${id} exists !`,
+      });
+    }
+    res.status(200).json({
+      message: `User with id:${id} deleted successfully !`,
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.name === "CastError") {
+      return res.status(404).json({
+        message: "Invalid id !",
+        error: err,
+      });
+    }
+    res.status(500).json({
+      message: "something went wrong !",
+      error: err,
+    });
+  }
+});
 
 module.exports = router;
