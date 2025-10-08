@@ -6,6 +6,7 @@ const Book = require("./models/books.model.cjs");
 const Author = require("./models/author.model.js");
 
 const authorRoute = require("./routers/authors.routes.js");
+const usersRoute = require("./routers/users.routes.js");
 
 // Testing
 
@@ -226,6 +227,10 @@ app.delete("/api/books/:id", async (req, res) => {
 
 app.use("/api/authors", authorRoute);
 
+// --------------------------USERS-API----------------------------------------------------
+
+app.use("/api/users", usersRoute);
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -234,6 +239,6 @@ mongoose
       console.log(`Server is listening to ${process.env.PORT}`);
     });
   })
-  .catch(() => {
-    console.log("Connection failed !");
+  .catch((err) => {
+    console.log("Connection failed !", err);
   });
