@@ -1,7 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const Actor = require("./models/actors.model");
+/** @type {import('mongoose').Model} */
+
+const authActor = require("./routers/actors.routes.js");
 
 const app = express();
+app.use(express.json());
+app.use(cors());
+
+// Actors api
+app.use("/api/actors", authActor);
 
 require("dotenv").config();
 
@@ -17,6 +27,7 @@ mongoose
       console.log(`Server is listening to ${process.env.PORT}`);
     });
   })
-  .catch(() => {
+  .catch((err) => {
+    console.error(err);
     console.log("Connection failed !");
   });
