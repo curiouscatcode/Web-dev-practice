@@ -1,0 +1,18 @@
+A. Btn01: 
+  1. button is inline-block by default 
+  2. mx-auto makes a component horizatonally center 
+  3. mx-auto works only on block. 
+
+  4. box-shadow: 
+    a. Creates a shadow effect around a box(div, button, card, etc)
+    b. css syntax: offset-x offset-y blur-radius spread-radius color;
+    c. tailwindcss: shadow-sm ; shadow ; shadow-md ; shadow-lg; shadow-lg ; shadow-xl ; shadow-2xl
+  
+  5. There are different types of transition (like for opacity, colors, etc)
+
+----------------------------------------------------------------------------------------------------------------
+
+B. Btn02: 
+  1. line-height: Space line between lines ; tailwindcss command: leading-
+  2. word-spacing: Space between words
+  3. space between letters: letter-spacing ; tailwindcss command: tracking-
