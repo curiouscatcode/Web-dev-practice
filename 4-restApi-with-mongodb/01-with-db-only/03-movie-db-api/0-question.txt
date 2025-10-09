@@ -1,0 +1,74 @@
+
+## **Movie Database API*
+### **1. Entities / Models**
+
+We’ll need 4 main collections:
+
+1. **Movies**
+
+   * `title` (String, required)
+   * `description` (String)
+   * `releaseYear` (Number)
+   * `genre` (Array of Strings)
+   * `director` (ObjectId → Directors)
+   * `actors` (Array of ObjectIds → Actors)
+   * `rating` (Number, optional)
+
+2. **Actors**
+
+   * `name` (String, required)
+   * `dob` (Date)
+   * `bio` (String)
+
+3. **Directors**
+
+   * `name` (String, required)
+   * `dob` (Date)
+   * `bio` (String)
+
+4. **Reviews**
+
+   * `movie` (ObjectId → Movie)
+   * `reviewerName` (String)
+   * `comment` (String)
+   * `rating` (Number, 1–5)
+   * `createdAt` (Date, default: now)
+
+---
+
+### **2. Features / API Endpoints**
+
+#### **Movies**
+
+* `GET /movies` → List all movies
+* `GET /movies/:id` → Get movie details (populate director & actors)
+* `POST /movies` → Add a new movie
+* `PUT /movies/:id` → Update movie info
+* `DELETE /movies/:id` → Delete a movie
+
+#### **Actors**
+
+* `GET /actors` → List all actors
+* `POST /actors` → Add actor
+
+#### **Directors**
+
+* `GET /directors` → List all directors
+* `POST /directors` → Add director
+
+#### **Reviews**
+
+* `GET /movies/:id/reviews` → Get reviews of a movie
+* `POST /movies/:id/reviews` → Add review to a movie
+
+---
+
+### **3. Extra Challenges (Optional for Practice)**
+
+* Search movies by `genre` or `releaseYear`
+* Filter movies with `rating >= 4`
+* Show top-rated movies
+* Populate actor & director details in movie responses
+
+---
+
