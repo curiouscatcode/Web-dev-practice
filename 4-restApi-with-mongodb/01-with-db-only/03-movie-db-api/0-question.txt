@@ -48,8 +48,8 @@ We’ll need 4 main collections:
 
 #### **Actors**
 
-* `GET /actors` → List all actors
-* `POST /actors` → Add actor
+* `GET /actors` → List all actors ✅
+* `POST /actors` → Add actor  ✅
 
 #### **Directors**
 
