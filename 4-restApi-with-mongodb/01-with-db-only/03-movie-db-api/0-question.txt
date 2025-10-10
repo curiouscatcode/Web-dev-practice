@@ -40,11 +40,11 @@ We’ll need 4 main collections:
 
 #### **Movies**
 
-* `GET /movies` → List all movies
-* `GET /movies/:id` → Get movie details (populate director & actors)
-* `POST /movies` → Add a new movie
-* `PUT /movies/:id` → Update movie info
-* `DELETE /movies/:id` → Delete a movie
+* `GET /movies` → List all movies ✅
+* `GET /movies/:id` → Get movie details (populate director & actors) ✅
+* `POST /movies` → Add a new movie  ✅
+* `PUT /movies/:id` → Update movie info ✅
+* `DELETE /movies/:id` → Delete a movie ✅
 
 #### **Actors**
 
@@ -53,8 +53,8 @@ We’ll need 4 main collections:
 
 #### **Directors**
 
-* `GET /directors` → List all directors
-* `POST /directors` → Add director
+* `GET /directors` → List all directors✅
+* `POST /directors` → Add director ✅
 
 #### **Reviews**
 
