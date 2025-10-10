@@ -25,3 +25,7 @@ const ReviewsSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+const Review = mongoose.model("Review", ReviewsSchema);
+
+module.exports = Review;
