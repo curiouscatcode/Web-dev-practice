@@ -15,11 +15,13 @@ import Btn11 from "../components/1-a/Btn11";
 import Btn12 from "../components/1-a/Btn12";
 import Btn13 from "../components/1-a/Btn13";
 
+import Field01 from "../components/1-b/field01";
+
 function App() {
   return (
     <>
-      <div className="bg-amber-200">
-        <Btn01 />
+      <div className="bg-white mx-4 my-5">
+        {/* <Btn01 />
         <Btn02 />
         <Btn03 />
         <Btn04 />
@@ -31,7 +33,9 @@ function App() {
         <Btn10 />
         <Btn11 />
         <Btn12 />
-        <Btn13 />
+        <Btn13 /> */}
+
+        <Field01 />
       </div>
     </>
   );
