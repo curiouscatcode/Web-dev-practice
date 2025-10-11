@@ -13,10 +13,10 @@
 
 #### **Users**
 
-* `POST /api/users/signup` → Create a new user
+* `POST /api/users/signup` → Create a new user ✅
 * `POST /api/users/login` → Login user (JWT or session)
-* `GET /api/users/me` → Get logged-in user info
-* `PATCH /api/users/me` → Update profile
+* `GET /api/users/me` → Get logged-in user info ✅
+* `PATCH /api/users/me` → Update profile ✅
 
 ---
 
