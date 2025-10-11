@@ -41,8 +41,8 @@ THIS WAS DONE INSIDE THE FILTER OF RECIPES !
 
 #### **Reviews**
 
-* `POST /api/recipes/:id/reviews` → Add review for a recipe
-* `GET /api/recipes/:id/reviews` → Get all reviews of a recipe
+* `POST /api/recipes/:id/reviews` → Add review for a recipe ✅
+* `GET /api/recipes/:id/reviews` → Get all reviews of a recipe ✅
 * `PATCH /api/reviews/:id` → Edit review (only creator)
 * `DELETE /api/reviews/:id` → Delete review (only creator)
 

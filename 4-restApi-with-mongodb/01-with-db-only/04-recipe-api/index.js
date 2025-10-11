@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-const User = require("./models/users.model.js");
-const Recipe = require("./models/recipes.model.js");
+// const User = require("./models/users.model.js");
+// const Recipe = require("./models/recipes.model.js");
+// const Review = require("./models/reviews.model.js");
 
 const authUser = require("./routes/users.routes.js");
 const authRecipe = require("./routes/recipes.routes.js");
+const authReview = require("./routes/reviews.routes.js");
 
 const app = express();
 app.use(express.json());
@@ -20,7 +22,10 @@ app.get("/", (req, res) => {
 
 // Users API
 app.use("/api/users", authUser);
+// Recipe API
 app.use("/api/recipes", authRecipe);
+// Reviews API
+app.use("/recipes/:id/reviews", authReview);
 
 mongoose
   .connect(process.env.MONGO_URI)
