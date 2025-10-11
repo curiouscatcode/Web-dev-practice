@@ -14,7 +14,7 @@ const RecipesSchema = mongoose.Schema(
     },
     ingredients: [
       {
-        ingredient: { type: mongoose.Schema.Types.ObjectId, ref: "Ingredient" },
+        name: String,
         quantity: Number,
         unit: String,
       },

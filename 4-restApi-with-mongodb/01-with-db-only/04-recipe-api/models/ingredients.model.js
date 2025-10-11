@@ -22,4 +22,4 @@ const IngredientsSchema = mongoose.Schema(
 
 const Ingredients = mongoose.model("ingredients", IngredientsSchema);
 
-module.exports = Ingredients;
+// module.exports = Ingredients;

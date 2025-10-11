@@ -22,14 +22,15 @@
 
 #### **Recipes**
 
-* `POST /api/recipes` → Create a new recipe (logged-in users)
-* `GET /api/recipes` → Get all recipes (with optional filtering by ingredient or cuisine type)
-* `GET /api/recipes/:id` → Get details of a single recipe
-* `PATCH /api/recipes/:id` → Update recipe (only creator or admin)
-* `DELETE /api/recipes/:id` → Delete recipe (only creator or admin)
+* `POST /api/recipes` → Create a new recipe   ✅
+* `GET /api/recipes` → Get all recipes (with optional filtering by ingredient or cuisine type)  ✅
+* `GET /api/recipes/:id` → Get details of a single recipe ✅
+* `PATCH /api/recipes/:id` → Update recipe ✅
+* `DELETE /api/recipes/:id` → Delete recipe  ✅
 
 ---
 
+THIS WAS DONE INSIDE THE FILTER OF RECIPES !
 #### **Ingredients** *(optional separate routes)*
 
 * `GET /api/ingredients` → Get all ingredients
@@ -85,3 +86,68 @@
 * Filtering and searching with query parameters
 
 ---
+
+Example: 
+
+{
+    "title": "Pakorda", 
+    "description": "Mast bhajiya ", 
+    "cuisine": "Veg Indian", 
+    "ingredients": [
+      {
+        "name": "Besan", 
+        "quantity": 2, 
+        "unit": "small bowls"
+      },
+      {
+        "name": "Garlic", 
+        "quantity": 5, 
+        "unit": "pcs"
+      },
+      {
+        "name": "Oil", 
+        "quantity": 3, 
+        "unit": "Teaspoons" 
+      }, 
+      {
+        "name": "Laal Mirch", 
+        "quantity": 1, 
+        "unit": "Teaspoons"
+      },
+      {
+        "name": "Water", 
+        "quantity": 4, 
+        "unit": "Glass" 
+      }, 
+      {
+        "name": "Salt", 
+        "quantity": 2, 
+        "unit": "Teaspoons"
+      }, 
+      {
+        "name": "Haldi", 
+        "quantity": 1,
+        "unit": "Teaspoons"
+      }, 
+      {
+        "name": "Potato", 
+        "quantity": 3, 
+        "unit": "pcs"
+      }, 
+      {
+        "name": "Onion", 
+        "quantity": 2,
+        "unit": "pcs"
+      }, 
+      {
+        "name": "Pasta masala", 
+        "quantity": 1, 
+        "unit": "packet"
+      }
+    ], 
+    "steps": [
+      "Cut tomato and potato and onion", "put oil on pan", "put garlic", "put rice","put potato and tomato and onion" ,"put water", "put laal mirch and salt", "also put water and cover the pan", "mix besan and but all in oil"  
+    ], 
+    "createdBy": "68e9d859f497113d6807a552", 
+    "averageRating": 9.5
+  }
