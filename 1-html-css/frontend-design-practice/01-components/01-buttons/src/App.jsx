@@ -1,15 +1,19 @@
 import "./App.css";
 import "./index.css";
 
-import Btn01 from "../components/btn01";
-import Btn02 from "../components/btn02";
-import Btn03 from "../components/Btn03";
-import Btn04 from "../components/Btn04";
-import Btn05 from "../components/Btn05";
-import Btn06 from "../components/Btn06";
-import Btn07 from "../components/Btn07";
-import Btn08 from "../components/Btn08";
-import Btn09 from "../components/Btn09";
+import Btn01 from "../components/1-a/Btn01";
+import Btn02 from "../components/1-a/Btn02";
+import Btn03 from "../components/1-a/Btn03";
+import Btn04 from "../components/1-a/Btn04";
+import Btn05 from "../components/1-a/Btn05";
+import Btn06 from "../components/1-a/Btn06";
+import Btn07 from "../components/1-a/Btn07";
+import Btn08 from "../components/1-a/Btn08";
+import Btn09 from "../components/1-a/Btn09";
+import Btn10 from "../components/1-a/Btn10";
+import Btn11 from "../components/1-a/Btn11";
+import Btn12 from "../components/1-a/Btn12";
+import Btn13 from "../components/1-a/Btn13";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
         <Btn07 />
         <Btn08 />
         <Btn09 />
+        <Btn10 />
+        <Btn11 />
+        <Btn12 />
+        <Btn13 />
       </div>
     </>
   );
