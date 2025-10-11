@@ -1,0 +1,87 @@
+## **Recipe API (Expanded)**
+
+### **Entities**
+
+* `Recipes` → created by users, contains ingredients and other details
+* `Ingredients` → part of recipes, can be reused across recipes
+* `Users` → create recipes, write reviews
+* `Reviews` → comments and ratings for recipes
+
+---
+
+### **API Endpoints**
+
+#### **Users**
+
+* `POST /api/users/signup` → Create a new user
+* `POST /api/users/login` → Login user (JWT or session)
+* `GET /api/users/me` → Get logged-in user info
+* `PATCH /api/users/me` → Update profile
+
+---
+
+#### **Recipes**
+
+* `POST /api/recipes` → Create a new recipe (logged-in users)
+* `GET /api/recipes` → Get all recipes (with optional filtering by ingredient or cuisine type)
+* `GET /api/recipes/:id` → Get details of a single recipe
+* `PATCH /api/recipes/:id` → Update recipe (only creator or admin)
+* `DELETE /api/recipes/:id` → Delete recipe (only creator or admin)
+
+---
+
+#### **Ingredients** *(optional separate routes)*
+
+* `GET /api/ingredients` → Get all ingredients
+* `GET /api/ingredients/:id` → Get ingredient details
+* Can also be nested inside recipes rather than separate endpoints
+
+---
+
+#### **Reviews**
+
+* `POST /api/recipes/:id/reviews` → Add review for a recipe
+* `GET /api/recipes/:id/reviews` → Get all reviews of a recipe
+* `PATCH /api/reviews/:id` → Edit review (only creator)
+* `DELETE /api/reviews/:id` → Delete review (only creator)
+
+---
+
+### **Features to Implement**
+
+1. **User authentication & authorization**
+
+   * Only logged-in users can create recipes or reviews
+   * Only creators can update/delete their recipes/reviews
+
+2. **Nested arrays**
+
+   * Recipes can have multiple ingredients
+   * Reviews nested under recipes
+
+3. **Filtering & search**
+
+   * Filter recipes by ingredient(s)
+   * Filter by cuisine type or other recipe attributes
+
+4. **Ratings & comments**
+
+   * Users can rate recipes (1–5 stars)
+   * Aggregate rating of each recipe can be calculated
+
+5. **Optional bonus**
+
+   * Pagination for recipes and reviews
+   * Recipe images or multimedia
+   * Favorite recipes / bookmarked recipes
+
+---
+
+### **Learning Outcomes**
+
+* Handling **nested arrays in MongoDB** (ingredients inside recipes, reviews inside recipes)
+* Role-based access control
+* CRUD operations with related data
+* Filtering and searching with query parameters
+
+---

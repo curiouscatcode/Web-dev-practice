@@ -2,7 +2,7 @@ Perfect! Since you’ve already done a **book-store API**, the next step is to p
 
 ---
 
-### **1. Movie Database API**
+### **1. Movie Database API**    ✅
 
 * Entities: `Movies`, `Actors`, `Directors`, `Reviews`
 * Features:

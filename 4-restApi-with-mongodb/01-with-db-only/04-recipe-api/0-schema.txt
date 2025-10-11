@@ -1,0 +1,138 @@
+Perfect! Let’s design a **MongoDB schema** for your **Recipe API** based on the entities and features you want. I’ll break it down **collection by collection** and explain the reasoning so you can understand the structure, including nested arrays where needed.
+
+---
+
+## **1️⃣ Users Collection**
+
+Users create recipes and write reviews.
+
+```js
+const UserSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user"
+  },
+  createdAt: { type: Date, default: Date.now }
+});
+```
+
+**Notes:**
+
+* Passwords should be hashed before saving.
+* `role` is optional, useful if you want admin features later.
+
+---
+
+## **2️⃣ Ingredients Collection** *(optional)*
+
+You can choose to have ingredients as a separate collection, or just embed them inside recipes. I’ll make it separate for reusability.
+
+```js
+const IngredientSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  unit: String, // e.g., grams, cups, tbsp
+  createdAt: { type: Date, default: Date.now }
+});
+```
+
+**Notes:**
+
+* You can reference ingredients in recipes by `_id`.
+* This allows filtering recipes by ingredient.
+
+---
+
+## **3️⃣ Recipes Collection**
+
+Each recipe is created by a user, contains ingredients, cuisine type, and can have multiple reviews.
+
+```js
+const RecipeSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  description: String,
+  cuisine: String, // e.g., Italian, Indian
+  ingredients: [
+    {
+      ingredient: { type: mongoose.Schema.Types.ObjectId, ref: "Ingredient" },
+      quantity: Number,
+      unit: String
+    }
+  ],
+  steps: [String], // list of steps
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  averageRating: { type: Number, default: 0 },
+  createdAt: { type: Date, default: Date.now }
+});
+```
+
+**Notes:**
+
+* `ingredients` is an array of objects → **nested arrays** practice.
+* `steps` can be an array of strings describing the recipe steps.
+* `averageRating` can be calculated dynamically based on reviews.
+
+---
+
+## **4️⃣ Reviews Collection**
+
+Reviews reference both the recipe and the user.
+
+```js
+const ReviewSchema = new mongoose.Schema({
+  recipe: { type: mongoose.Schema.Types.ObjectId, ref: "Recipe", required: true },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  rating: { type: Number, required: true, min: 1, max: 5 },
+  comment: String,
+  createdAt: { type: Date, default: Date.now }
+});
+```
+
+**Notes:**
+
+* Each review references the recipe and the user.
+* You can calculate the recipe’s average rating from this collection.
+* Optional: you can embed reviews directly inside recipes, but keeping them separate is more scalable.
+
+---
+
+## ✅ **Summary of Relationships**
+
+| Collection  | References                       |
+| ----------- | -------------------------------- |
+| Recipes     | User (creator), Ingredient(s)    |
+| Reviews     | Recipe, User                     |
+| Ingredients | — (can be reused across recipes) |
+| Users       | —                                |
+
+---
+
+### **Key MongoDB Features Practiced**
+
+* Nested arrays (`ingredients` in recipes)
+* References between collections (`createdBy`, `recipe`, `user`)
+* Optional embedding vs referencing for scalability
+* Validation (`required`, `unique`, min/max)
+
+---
+
+If you want, I can **draw a visual schema diagram** showing collections and relationships — this makes it super easy to implement in Mongoose.
+
+Do you want me to do that?
