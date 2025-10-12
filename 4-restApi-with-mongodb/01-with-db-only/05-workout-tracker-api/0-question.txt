@@ -1,0 +1,69 @@
+### **Topic:** **Fitness / Workout Tracker API** 💪
+
+---
+
+### **Entities**
+
+1. **Users**
+
+   * Name
+   * Email
+   * Age
+   * Height, Weight
+
+2. **Workouts**
+
+   * Name (e.g., “Push-ups”, “Squats”)
+   * Type (enum: Strength, Cardio, Flexibility)
+   * Duration (minutes)
+   * Difficulty (enum: Easy, Medium, Hard)
+
+3. **Workout Logs**
+
+   * User (ObjectId → Users)
+   * Workout (ObjectId → Workouts)
+   * Date
+   * Reps / Sets / Duration
+   * Notes
+
+---
+
+### **CRUD Questions**
+
+1. **Users API**
+
+   * `POST /api/users` → Add a user
+   * `GET /api/users` → Get all users
+   * `GET /api/users/:id` → Get a user by ID
+   * `PATCH /api/users/:id` → Update user info
+   * `DELETE /api/users/:id` → Delete a user
+
+2. **Workouts API**
+
+   * `POST /api/workouts` → Add a workout
+   * `GET /api/workouts` → Get all workouts (filter by type or difficulty)
+   * `GET /api/workouts/:id` → Get workout details
+   * `PATCH /api/workouts/:id` → Update workout
+   * `DELETE /api/workouts/:id` → Delete workout
+
+3. **Workout Logs API**
+
+   * `POST /api/logs` → Add workout log for a user
+   * `GET /api/logs/user/:userId` → Get all logs for a user
+   * `GET /api/logs/workout/:workoutId` → Get all logs for a workout
+   * `PATCH /api/logs/:id` → Update log
+   * `DELETE /api/logs/:id` → Delete log
+
+---
+
+### **Extra Challenge**
+
+* Include **nested arrays**: e.g., a workout could have multiple exercises inside it.
+* Add filtering by **date range** or **difficulty** for logs.
+* Optional: calculate total calories burned or total duration per user.
+
+---
+
+If you want, I can **also draft a basic DB schema for this Workout Tracker API** so you can start building quickly.
+
+Do you want me to do that?
