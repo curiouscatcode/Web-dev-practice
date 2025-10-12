@@ -32,11 +32,11 @@
 
 1. **Users API**
 
-   * `POST /api/users` → Add a user
-   * `GET /api/users` → Get all users
-   * `GET /api/users/:id` → Get a user by ID
-   * `PATCH /api/users/:id` → Update user info
-   * `DELETE /api/users/:id` → Delete a user
+   * `POST /api/users` → Add a user   ✅
+   * `GET /api/users` → Get all users ✅
+   * `GET /api/users/:id` → Get a user by ID ✅
+   * `PATCH /api/users/:id` → Update user info ✅
+   * `DELETE /api/users/:id` → Delete a user ✅
 
 2. **Workouts API**
 

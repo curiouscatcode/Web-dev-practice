@@ -1,6 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const User = require("./models/users.model.js");
+
+const authUser = require("./routes/users.routes.js");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
@@ -10,6 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to workout tracker API !");
 });
+
+// Users API
+app.use("/api/users", authUser);
 
 mongoose
   .connect(
