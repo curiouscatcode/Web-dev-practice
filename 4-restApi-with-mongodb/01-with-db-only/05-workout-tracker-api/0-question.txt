@@ -48,10 +48,10 @@
 
 3. **Workout Logs API**
 
-   * `POST /api/logs` → Add workout log for a user
-   * `GET /api/logs/user/:userId` → Get all logs for a user
-   * `GET /api/logs/workout/:workoutId` → Get all logs for a workout
-   * `PATCH /api/logs/:id` → Update log
+   * `POST /api/logs` → Add workout log for a user  ✅
+   * `GET /api/logs/user/:userId` → Get all logs for a user ✅
+   * `GET /api/logs/workout/:workoutId` → Get all logs for a workout ✅
+   * `PATCH /api/logs/:id` → Update log ✅
    * `DELETE /api/logs/:id` → Delete log
 
 ---

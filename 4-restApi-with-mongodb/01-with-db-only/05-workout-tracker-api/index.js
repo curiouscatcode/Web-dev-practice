@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 
 const User = require("./models/users.model.js");
 const Workout = require("./models/workouts.model.js");
+const WorkoutLog = require("./models/workout-logs.model.js");
 
 const authUser = require("./routes/users.routes.js");
 const authWorkout = require("./routes/workout.routes.js");
+const authLog = require("./routes/workoutLog.routes.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +23,8 @@ app.get("/", (req, res) => {
 app.use("/api/users", authUser);
 // Workout API
 app.use("/api/workouts", authWorkout);
+// WorkoutLog API
+app.use("/api/logs", authLog);
 
 // name, type (Strength/Cardio/Flexibility), duration, difficulty(Easy/Medium/Hard)
 
