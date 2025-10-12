@@ -89,9 +89,3 @@ Assume the users and workouts are already created and you have their ObjectIds.
   }
 ]
 ```
-
----
-
-If you want, I can **also make a ready-to-use Postman/Thunder Client collection** with these dummy data for you, so you can **immediately test all routes**.
-
-Do you want me to do that?
