@@ -40,11 +40,11 @@
 
 2. **Workouts API**
 
-   * `POST /api/workouts` → Add a workout
-   * `GET /api/workouts` → Get all workouts (filter by type or difficulty)
-   * `GET /api/workouts/:id` → Get workout details
-   * `PATCH /api/workouts/:id` → Update workout
-   * `DELETE /api/workouts/:id` → Delete workout
+   * `POST /api/workouts` → Add a workout  ✅
+   * `GET /api/workouts` → Get all workouts (filter by type or difficulty) ✅
+   * `GET /api/workouts/:id` → Get workout details ✅
+   * `PATCH /api/workouts/:id` → Update workout ✅
+   * `DELETE /api/workouts/:id` → Delete workout ✅
 
 3. **Workout Logs API**
 
@@ -63,7 +63,3 @@
 * Optional: calculate total calories burned or total duration per user.
 
 ---
-
-If you want, I can **also draft a basic DB schema for this Workout Tracker API** so you can start building quickly.
-
-Do you want me to do that?
