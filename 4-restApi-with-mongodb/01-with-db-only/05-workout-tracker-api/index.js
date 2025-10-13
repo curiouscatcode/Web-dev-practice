@@ -29,9 +29,7 @@ app.use("/api/logs", authLog);
 // name, type (Strength/Cardio/Flexibility), duration, difficulty(Easy/Medium/Hard)
 
 mongoose
-  .connect(
-    "mongodb+srv://amitsuthar4887_db_user:302188oZVtZ9YW12@ab-cluster.xolxkxo.mongodb.net/Workout-tracker-API-practice?retryWrites=true&w=majority&appName=ab-cluster"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to the db !");
     app.listen(PORT, () => {

@@ -1,0 +1,111 @@
+Perfect! 🎉 Event Management API is a great choice — it naturally requires authentication and ownership-based authorization. Let’s design it carefully.
+
+---
+
+## 1️⃣ **Database Schemas**
+
+We’ll need **two main models**: `User` and `Event`.
+
+---
+
+### **User Schema**
+
+```js
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
+const UserSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true },
+  email:    { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  role:     { type: String, enum: ["user", "admin"], default: "user" }
+}, { timestamps: true });
+
+// Password hashing before saving
+UserSchema.pre("save", async function(next) {
+  if (!this.isModified("password")) return next();
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+const User = mongoose.model("User", UserSchema);
+module.exports = User;
+```
+
+---
+
+### **Event Schema**
+
+```js
+const mongoose = require("mongoose");
+
+const EventSchema = new mongoose.Schema({
+  title:       { type: String, required: true },
+  description: { type: String },
+  date:        { type: Date, required: true },
+  location:    { type: String },
+  createdBy:   { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+  attendees:   [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }]
+}, { timestamps: true });
+
+const Event = mongoose.model("Event", EventSchema);
+module.exports = Event;
+```
+
+**Notes:**
+
+* `createdBy` → Who created the event (ownership for authorization).
+* `attendees` → Users who RSVP’d to the event.
+
+---
+
+## 2️⃣ **Routes Design**
+
+We’ll split into **auth routes** and **event routes**.
+
+---
+
+### **Auth Routes**
+
+| Method | Route       | Description            |
+| ------ | ----------- | ---------------------- |
+| POST   | `/register` | Register new user      |
+| POST   | `/login`    | Login user, return JWT |
+
+---
+
+### **Event Routes**
+
+| Method | Route              | Description      | Auth?    | Authorization?   |
+| ------ | ------------------ | ---------------- | -------- | ---------------- |
+| GET    | `/events`          | Get all events   | Optional | No               |
+| GET    | `/events/:id`      | Get single event | Optional | No               |
+| POST   | `/events`          | Create new event | Yes      | User only        |
+| PATCH  | `/events/:id`      | Update event     | Yes      | Only creator     |
+| DELETE | `/events/:id`      | Delete event     | Yes      | Only creator     |
+| POST   | `/events/:id/rsvp` | RSVP to an event | Yes      | Not creator only |
+
+---
+
+## 3️⃣ **Authentication / Authorization Plan**
+
+1. Use **JWT** for auth:
+
+   * `/login` returns a token.
+   * Client sends token in `Authorization: Bearer <token>` header.
+
+2. Middleware:
+
+   * `authMiddleware` → Verify JWT, attach `req.user`.
+   * `ownershipMiddleware` → Check if `req.user._id === event.createdBy`.
+
+3. Optional:
+
+   * Admin role: Can delete/update any event.
+
+---
+
+If you want, I can **write the exact route implementations in Express** for all these endpoints today, **with JWT auth + ownership checks**, so you can start coding immediately.
+
+Do you want me to do that next?
