@@ -1,0 +1,21 @@
+1. Event Management API
+
+    Users can register/login.
+
+    Authenticated users can create events (name, date, description).
+
+    Users can RSVP to events.
+
+    Only event creators can edit/delete their events.
+
+------------------------------------------------------------------------------------------
+
+2. Online Poll / Voting API
+
+    Users signup/login.
+
+    Users can create polls with options.
+
+    Authenticated users can vote once per poll.
+
+    Poll creator can see poll results
