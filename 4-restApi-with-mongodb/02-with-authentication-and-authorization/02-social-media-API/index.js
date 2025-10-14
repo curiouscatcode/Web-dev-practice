@@ -8,6 +8,7 @@ const jwt = require("jsonwebtoken");
 
 // Getting db
 const User = require("./models/users.models.js");
+const Post = require("./models/posts.models.js");
 
 // Get other middlewares
 const requireAuth = require("./middleware/requireAuth.js");
@@ -39,6 +40,122 @@ app.use("/api", authUser);
 // Test: Check admin dashboard !
 app.get("/admin-dashboard", requireAuth, checkAdmin, (req, res) => {
   res.send("Welcome Admin!");
+});
+
+// 1. `POST /` → Create a post (protected).
+app.post("/post", requireAuth, async (req, res) => {
+  const { content } = req.body;
+  if (!content) {
+    return res.status(400).json({
+      message: "Content cannot be empty !",
+    });
+  }
+  try {
+    // Create a post
+    const newPost = await Post.create({
+      content,
+      createdBy: req.user._id,
+    });
+
+    // response
+    res.status(201).json({
+      message: "Post successfully created !",
+      post: newPost,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
+// 2. `GET /` → Get all posts (maybe public).
+app.get("/posts", async (req, res) => {
+  try {
+    const allPosts = await Post.find();
+
+    if (!allPosts) {
+      return res.status(400).json({
+        message: "No post exists !",
+      });
+    }
+
+    res.status(200).json({
+      message: "Here is the all posts: ",
+      posts: allPosts,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+    });
+  }
+});
+
+// 3. `GET /:id` → Get single post.
+app.get("/post/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const post = await Post.findById(id);
+
+    if (!post) {
+      return res.status(400).json({
+        message: `No post with id:${id} exists !`,
+      });
+    }
+    res.status(200).json({
+      message: "Here's the post: ",
+      post: post,
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: `Invalid id:${id} type !`,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
+// 4. `PUT /:id` → Update post (owner only).
+app.put("/post/:id", requireAuth, isPostOwner, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const post = await Post.findByIdAndUpdate(id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!post) {
+      return res.status(400).json({
+        message: `No post with id:${id} exists !`,
+      });
+    }
+
+    const updatedUser = await post.save();
+
+    res.status(200).json({
+      message: "Updated successfully !",
+      user: updatedUser,
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: `Invalid Post_owner id:${id} type !`,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
 });
 
 mongoose
