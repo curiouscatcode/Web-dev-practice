@@ -3,6 +3,10 @@ const express = require("express");
 
 const router = express.Router();
 
+const requireAuth = require("../middleware/requireAuth");
+const checkAdmin = require("../middleware/checkAdmin");
+const isUser = require("../middleware/isUser");
+
 // 1. `GET /` → Get all users (admin only, or limited info).
 router.get("/users", requireAuth, checkAdmin, async (req, res) => {
   try {
