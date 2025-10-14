@@ -1,0 +1,48 @@
+## 🔹 **Auth Routes (`/api/auth`)**
+
+1. `POST /register` → Register new user (hash password, store in DB). ✅
+2. `POST /login` → Authenticate user, return JWT. ✅
+3. `POST /logout` → (Optional if using cookies, clear cookie).✅
+4. `GET /me` → Get logged-in user profile (protected route). ✅
+
+---
+
+## 🔹 **User Routes (`/api/users`)**
+
+1. `GET /` → Get all users (admin only, or limited info).
+2. `GET /:id` → Get user by ID.
+3. `PUT /:id` → Update user info (protected, self-only).
+4. `DELETE /:id` → Delete account (protected, self-only).
+5. `PUT /:id/follow` → Follow a user (protected).
+6. `PUT /:id/unfollow` → Unfollow a user (protected).
+
+---
+
+## 🔹 **Post Routes (`/api/posts`)**
+
+1. `POST /` → Create a post (protected).
+2. `GET /` → Get all posts (maybe public).
+3. `GET /:id` → Get single post.
+4. `PUT /:id` → Update post (owner only).
+5. `DELETE /:id` → Delete post (owner only).
+6. `PUT /:id/like` → Like/Unlike post (protected).
+7. `GET /user/:id` → Get all posts by a specific user.
+
+---
+
+## 🔹 **Comment Routes (`/api/comments`)**
+
+1. `POST /:postId` → Add comment on a post (protected).
+2. `GET /:postId` → Get all comments for a post.
+3. `PUT /:id` → Update comment (owner only).
+4. `DELETE /:id` → Delete comment (owner only).
+
+---
+
+## 🔹 **Extra (Optional)**
+
+* Notifications (`/api/notifications`)
+* Messaging/Chat (`/api/messages`)
+* Admin panel (`/api/admin`)
+
+---
