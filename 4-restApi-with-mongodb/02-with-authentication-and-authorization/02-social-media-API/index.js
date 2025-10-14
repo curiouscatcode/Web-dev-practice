@@ -12,9 +12,12 @@ const User = require("./models/users.models.js");
 // Get other middlewares
 const requireAuth = require("./middleware/requireAuth.js");
 const isPostOwner = require("./middleware/isPostOwner.js");
+const checkAdmin = require("./middleware/checkAdmin.js");
+const isUser = require("./middleware/isUser.js");
 
 // Getting routes
 const Auth = require("./routes/auth.routes.js");
+const authUser = require("./routes/users.routes.js");
 
 // Middlewares
 app.use(express.json());
@@ -22,12 +25,21 @@ app.use(cookieParser());
 app.use(cors());
 const PORT = process.env.PORT || 5000;
 
+// Test route
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to Social Media API !");
 });
 
 // Auth routes API
 app.use("/api", Auth);
+
+// User routes API
+app.use("/api", authUser);
+
+// Test: Check admin dashboard !
+app.get("/admin-dashboard", requireAuth, checkAdmin, (req, res) => {
+  res.send("Welcome Admin!");
+});
 
 mongoose
   .connect(process.env.MONGO_URI)

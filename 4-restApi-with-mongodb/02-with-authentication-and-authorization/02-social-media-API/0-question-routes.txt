@@ -9,10 +9,10 @@
 
 ## 🔹 **User Routes (`/api/users`)**
 
-1. `GET /` → Get all users (admin only, or limited info).
-2. `GET /:id` → Get user by ID.
-3. `PUT /:id` → Update user info (protected, self-only).
-4. `DELETE /:id` → Delete account (protected, self-only).
+1. `GET /` → Get all users (admin only, or limited info). ✅
+2. `GET /:id` → Get user by ID. ✅
+3. `PUT /:id` → Update user info (protected, self-only). ✅
+4. `DELETE /:id` → Delete account (protected, self-only). ✅
 5. `PUT /:id/follow` → Follow a user (protected).
 6. `PUT /:id/unfollow` → Unfollow a user (protected).
 
