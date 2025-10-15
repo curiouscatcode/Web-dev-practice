@@ -158,6 +158,65 @@ app.put("/post/:id", requireAuth, isPostOwner, async (req, res) => {
   }
 });
 
+// 5. `DELETE /:id` → Delete post (owner only).
+app.delete("/post/:id", requireAuth, isPostOwner, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const post = await Post.findByIdAndDelete(id);
+
+    if (!post) {
+      return res.status(400).json({
+        message: `No post with id:${id} exists !`,
+      });
+    }
+
+    res.status(200).json({
+      message: `Post with id:${id} deleted successfully !`,
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: `Invalid id:${id} type !`,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
+// 7. `GET /user/:id` → Get all posts by a specific user.
+app.get("/post/user/:id", requireAuth, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const post = await Post.find({ createdBy: id });
+
+    if (!post || post.length === 0) {
+      return res.status(400).json({
+        message: `No post by user with id:${id} !`,
+      });
+    }
+
+    res.status(200).json({
+      message: `Here are all the posts by user with id:${id} !`,
+      posts: post,
+    });
+  } catch (err) {
+    console.error(err);
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: `Invalid id:${id} type !`,
+      });
+    }
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {

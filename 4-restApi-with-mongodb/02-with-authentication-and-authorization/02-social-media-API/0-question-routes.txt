@@ -24,9 +24,9 @@
 2. `GET /` → Get all posts (maybe public). ✅
 3. `GET /:id` → Get single post. ✅
 4. `PUT /:id` → Update post (owner only).✅
-5. `DELETE /:id` → Delete post (owner only).
+5. `DELETE /:id` → Delete post (owner only).✅
 6. `PUT /:id/like` → Like/Unlike post (protected).
-7. `GET /user/:id` → Get all posts by a specific user.
+7. `GET /user/:id` → Get all posts by a specific user. ✅
 
 ---
 
