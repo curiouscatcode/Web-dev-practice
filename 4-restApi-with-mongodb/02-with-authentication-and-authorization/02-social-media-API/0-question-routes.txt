@@ -32,10 +32,10 @@
 
 ## 🔹 **Comment Routes (`/api/comments`)**
 
-1. `POST /:postId` → Add comment on a post (protected).
-2. `GET /:postId` → Get all comments for a post.
-3. `PUT /:id` → Update comment (owner only).
-4. `DELETE /:id` → Delete comment (owner only).
+1. `POST /:postId` → Add comment on a post (protected). ✅
+2. `GET /:postId` → Get all comments for a post. ✅
+3. `PUT /:id` → Update comment (owner only). ✅
+4. `DELETE /:id` → Delete comment (owner only). ✅
 
 ---
 
