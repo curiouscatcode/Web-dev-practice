@@ -17,6 +17,7 @@ import Btn13 from "../components/1-a/Btn13";
 
 import Field01 from "../components/1-b/field01";
 import Field02 from "../components/1-b/Field02";
+import Field03 from "../components/1-b/Field03";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
 
         <Field01 />
         <Field02 />
+        <Field03 />
       </div>
     </>
   );
