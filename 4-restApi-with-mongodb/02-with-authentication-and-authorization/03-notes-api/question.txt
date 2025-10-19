@@ -1,0 +1,49 @@
+### 📝 Problem Statement
+
+Build a **Notes API** where each user can create and manage their own notes.
+
+#### Models
+
+1. **User**
+
+   * `username` (string, unique, required)
+   * `email` (string, unique, required)
+   * `password` (hashed with bcrypt)
+
+2. **Note**
+
+   * `title` (string, required)
+   * `content` (string, required)
+   * `createdBy` (ObjectId → references User)
+   * `createdAt` (date, default: now)
+
+---
+
+#### Routes
+
+**Auth (JWT protected)**
+
+* `POST /api/auth/register` → register
+* `POST /api/auth/login` → login & get token
+
+**Notes (Protected)**
+
+* `POST /api/notes` → create a note (only logged-in user)
+* `GET /api/notes` → get all notes of logged-in user
+* `GET /api/notes/:id` → get single note (only if owned)
+* `PUT /api/notes/:id` → update note (only if owned)
+* `DELETE /api/notes/:id` → delete note (only if owned)
+
+---
+
+#### Middleware
+
+* `authMiddleware` → verifies token & sets `req.user`
+* `isNoteOwner` → checks if the logged-in user owns the note
+
+---
+
+👉 Your Task:
+
+* Build the full API with `mongoose`, `express`, `bcrypt`, `jsonwebtoken`.
+* Test creating users, logging in, and managing notes with JWT.
