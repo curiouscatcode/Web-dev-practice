@@ -90,4 +90,34 @@ router.get("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
   }
 });
 
+// * `PUT /api/notes/:id` → update note (only if owned)
+router.put("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const note = await Notes.findByIdAndUpdate(id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!note || note.length === 0) {
+      return res.status(400).json({
+        message: "note does not exists !",
+      });
+    }
+
+    const updatedNote = await note.save();
+
+    res.status(200).json({
+      message: `Note with id:${id} updated successfully !`,
+      updated: updatedNote,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
 module.exports = router;
