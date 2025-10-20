@@ -11,10 +11,16 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+      match: [/^\S+@\S+\.\S+$/, "Please provide a valid email address"],
     },
     password: {
       type: String,
       required: true,
+    },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
     },
   },
   {
@@ -24,13 +30,11 @@ const UserSchema = new mongoose.Schema(
 
 // Hash the password before saving
 UserSchema.pre("save", async function (next) {
-  {
-    if (!this.isModified("password")) {
-      return next();
-    }
-    this.password = await bcrypt.hash(this.password, 10);
-    next();
+  if (!this.isModified("password")) {
+    return next();
   }
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
 });
 
 // Compare password method
