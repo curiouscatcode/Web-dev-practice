@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 app.use("/api", Auth);
 
 // Notes routes
-app.use("/api", AuthNotes);
+app.use("/api/notes", AuthNotes);
 
 // db
 mongoose

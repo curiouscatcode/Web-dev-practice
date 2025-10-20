@@ -11,7 +11,7 @@ const requireAuth = require("../middleware/requireAuth.js");
 const isNoteOwner = require("../middleware/isNoteOwner.js");
 
 // * `POST /api/notes` → create a note (only logged-in user)
-router.post("/notes", requireAuth, async (req, res) => {
+router.post("/", requireAuth, async (req, res) => {
   const { title, content } = req.body;
   if (!title || !content) {
     return res.status(400).json({
@@ -40,7 +40,7 @@ router.post("/notes", requireAuth, async (req, res) => {
 });
 
 // * `GET /api/notes` → get all notes of logged-in user
-router.get("/notes", requireAuth, async (req, res) => {
+router.get("/", requireAuth, async (req, res) => {
   try {
     const notes = await Notes.find();
     if (!notes || notes.length === 0) {
@@ -62,7 +62,7 @@ router.get("/notes", requireAuth, async (req, res) => {
 });
 
 // * `GET /api/notes/:id` → get single note (only if owned)
-router.get("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
+router.get("/:id", requireAuth, isNoteOwner, async (req, res) => {
   const { id } = req.params;
   try {
     const note = await Notes.findById(id);
@@ -91,7 +91,7 @@ router.get("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
 });
 
 // * `PUT /api/notes/:id` → update note (only if owned)
-router.put("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
+router.put("/:id", requireAuth, isNoteOwner, async (req, res) => {
   const { id } = req.params;
   try {
     const note = await Notes.findByIdAndUpdate(id, req.body, {
@@ -115,6 +115,29 @@ router.put("/notes/:id", requireAuth, isNoteOwner, async (req, res) => {
     console.error(err);
     res.status(500).json({
       message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
+// * `DELETE /api/notes/:id` → delete note (only if owned)
+router.delete("/:id", requireAuth, isNoteOwner, async (req, res) => {
+  const { id } = req.params;
+  try {
+    const note = await Notes.findByIdAndDelete(id);
+    if (!note || note.length === 0) {
+      return res.status(400).json({
+        message: `No note with id:${id} exists !`,
+      });
+    }
+
+    res.status(200).json({
+      message: `Note with id:${id} deleted successfully !`,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong with route !",
       error: err,
     });
   }
