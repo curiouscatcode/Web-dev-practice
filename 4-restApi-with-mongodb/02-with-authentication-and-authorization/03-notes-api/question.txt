@@ -29,8 +29,8 @@ Build a **Notes API** where each user can create and manage their own notes.
 
 **Notes (Protected)**
 
-* `POST /api/notes` → create a note (only logged-in user)
-* `GET /api/notes` → get all notes of logged-in user
+* `POST /api/notes` → create a note (only logged-in user) ✅
+* `GET /api/notes` → get all notes of logged-in user ✅
 * `GET /api/notes/:id` → get single note (only if owned)
 * `PUT /api/notes/:id` → update note (only if owned)
 * `DELETE /api/notes/:id` → delete note (only if owned)

@@ -36,4 +36,26 @@ router.post("/notes", requireAuth, async (req, res) => {
   }
 });
 
+// * `GET /api/notes` → get all notes of logged-in user
+router.get("/notes", requireAuth, async (req, res) => {
+  try {
+    const notes = await Notes.find();
+    if (!notes || notes.length === 0) {
+      return res.status(400).json({
+        message: `No notes exists !`,
+      });
+    }
+    res.status(200).json({
+      message: "Here's the list is on notes: ",
+      notes: notes,
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      message: "Something went wrong !",
+      error: err,
+    });
+  }
+});
+
 module.exports = router;
