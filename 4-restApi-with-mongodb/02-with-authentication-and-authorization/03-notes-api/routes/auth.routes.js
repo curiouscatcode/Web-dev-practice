@@ -103,4 +103,11 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// Logout
+router.post("/logout", async (req, res) => {
+  res.clearCookie("token").json({
+    message: "Logged Out !",
+  });
+});
+
 module.exports = router;
