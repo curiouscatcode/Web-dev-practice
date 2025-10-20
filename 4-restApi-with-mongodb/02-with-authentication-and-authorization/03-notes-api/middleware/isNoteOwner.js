@@ -1,10 +1,11 @@
 const Notes = require("../models/notes.models.js");
 
 const isNoteOwner = async (req, res, next) => {
+  const { id } = req.params;
   try {
-    const note = await Notes.findById(req.params.id);
+    const note = await Notes.findById(id);
 
-    if (!post) {
+    if (!note) {
       return res.status(404).json({
         error: "Note not found !",
       });
@@ -19,6 +20,12 @@ const isNoteOwner = async (req, res, next) => {
     next();
   } catch (err) {
     console.error(err);
+    if (err.name === "CastError") {
+      return res.status(400).json({
+        message: `Invalid type of id:${id}`,
+        error: err,
+      });
+    }
     res.status(500).json({
       message: "Something went wrong with owner middleware !",
       error: err,
