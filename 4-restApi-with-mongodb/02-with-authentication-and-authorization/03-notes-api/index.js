@@ -9,6 +9,8 @@ const jwt = require("jsonwebtoken");
 
 const User = require("./models/users.models.js");
 
+const Auth = require("./routes/auth.routes.js");
+
 // Middleware
 app.use(express.json());
 app.use(cors());
@@ -21,48 +23,8 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome to note API !");
 });
 
-// Signup
-app.post("/signup", async (req, res) => {
-  try {
-    // 1. extract data and edge case 01
-    const { name, email, password, role } = req.body;
-    if (!name || !email || !password) {
-      return res.status(400).json({
-        error: "All fields required !",
-      });
-    }
-    // 2. check if user exists
-    const exists = await User.findOne({ email });
-    if (exists) {
-      return res.status(400).json({
-        error: "Email already exists !",
-      });
-    }
-    // 3. create user
-    const user = await User.create({
-      name,
-      email,
-      password,
-      role,
-    });
-    // 4. response
-    res.status(201).json({
-      message: "Successfully registered !",
-    });
-  } catch (err) {
-    console.error(err);
-    if (err.code === 11000) {
-      return res.status(401).json({
-        message: "Email should be unique !",
-        error: err,
-      });
-    }
-    res.status(500).json({
-      message: "Something went wrong !",
-      error: err,
-    });
-  }
-});
+// Auth routes
+app.use("/api", Auth);
 
 // db
 mongoose
