@@ -8,8 +8,10 @@ const app = express();
 const jwt = require("jsonwebtoken");
 
 const User = require("./models/users.models.js");
+const Notes = require("./models/notes.models.js");
 
 const Auth = require("./routes/auth.routes.js");
+const AuthNotes = require("./routes/notes.routes.js");
 
 // Middleware
 app.use(express.json());
@@ -25,6 +27,9 @@ app.get("/", (req, res) => {
 
 // Auth routes
 app.use("/api", Auth);
+
+// Notes routes
+app.use("/api", AuthNotes);
 
 // db
 mongoose

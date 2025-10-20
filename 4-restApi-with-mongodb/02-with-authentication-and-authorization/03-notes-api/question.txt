@@ -23,8 +23,9 @@ Build a **Notes API** where each user can create and manage their own notes.
 
 **Auth (JWT protected)**
 
-* `POST /api/auth/register` → register
-* `POST /api/auth/login` → login & get token
+* `POST /api/auth/register` → register ✅
+* `POST /api/auth/login` → login & get token ✅
+* `POST /api/logout` -> logout ✅
 
 **Notes (Protected)**
 
